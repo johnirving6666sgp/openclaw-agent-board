@@ -19,6 +19,7 @@ fs.mkdirSync(stateDir, { recursive: true });
 fs.writeFileSync(
   runnerPath,
   `#!/bin/zsh
+export PATH="${path.dirname(nodePath)}:/usr/bin:/bin:/usr/sbin:/sbin"
 cd "${root}" || exit 1
 exec "${nodePath}" "${npmCliPath}" run auto:reports
 `
