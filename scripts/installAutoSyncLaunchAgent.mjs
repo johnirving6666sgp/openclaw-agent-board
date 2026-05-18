@@ -9,6 +9,8 @@ const launchAgentsDir = path.join(os.homedir(), 'Library', 'LaunchAgents');
 const plistPath = path.join(launchAgentsDir, `${label}.plist`);
 const logDir = path.join(root, 'logs');
 const uid = execFileSync('id', ['-u'], { encoding: 'utf8' }).trim();
+const nodePath = fs.realpathSync(process.execPath);
+const npmPath = path.join(path.dirname(nodePath), 'npm');
 
 fs.mkdirSync(launchAgentsDir, { recursive: true });
 fs.mkdirSync(logDir, { recursive: true });
@@ -22,10 +24,12 @@ const plist = `<?xml version="1.0" encoding="UTF-8"?>
   <string>${label}</string>
   <key>ProgramArguments</key>
   <array>
-    <string>/bin/zsh</string>
-    <string>-lc</string>
-    <string>cd "${root}" &amp;&amp; npm run auto:reports</string>
+    <string>${npmPath}</string>
+    <string>run</string>
+    <string>auto:reports</string>
   </array>
+  <key>WorkingDirectory</key>
+  <string>${root}</string>
   <key>StartInterval</key>
   <integer>300</integer>
   <key>RunAtLoad</key>
