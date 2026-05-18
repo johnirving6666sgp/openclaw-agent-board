@@ -7,14 +7,14 @@ const root = path.resolve(import.meta.dirname, '..');
 const label = 'com.openclaw.agent-board-sync';
 const launchAgentsDir = path.join(os.homedir(), 'Library', 'LaunchAgents');
 const plistPath = path.join(launchAgentsDir, `${label}.plist`);
-const logDir = path.join(root, 'logs');
-const runnerPath = path.join(logDir, 'run-auto-sync.zsh');
+const stateDir = path.join(os.homedir(), '.openclaw', 'agent-board-sync');
+const runnerPath = path.join(stateDir, 'run-auto-sync.zsh');
 const uid = execFileSync('id', ['-u'], { encoding: 'utf8' }).trim();
 const nodePath = fs.realpathSync(process.execPath);
 const npmCliPath = path.resolve(path.dirname(nodePath), '..', 'lib', 'node_modules', 'npm', 'bin', 'npm-cli.js');
 
 fs.mkdirSync(launchAgentsDir, { recursive: true });
-fs.mkdirSync(logDir, { recursive: true });
+fs.mkdirSync(stateDir, { recursive: true });
 
 fs.writeFileSync(
   runnerPath,
@@ -41,9 +41,9 @@ const plist = `<?xml version="1.0" encoding="UTF-8"?>
   <key>RunAtLoad</key>
   <true/>
   <key>StandardOutPath</key>
-  <string>${path.join(logDir, 'auto-sync.log')}</string>
+  <string>${path.join(stateDir, 'auto-sync.log')}</string>
   <key>StandardErrorPath</key>
-  <string>${path.join(logDir, 'auto-sync-errors.log')}</string>
+  <string>${path.join(stateDir, 'auto-sync-errors.log')}</string>
 </dict>
 </plist>
 `;
@@ -61,4 +61,4 @@ execFileSync('launchctl', ['enable', `gui/${uid}/${label}`], { stdio: 'inherit' 
 
 console.log(`Installed ${label}`);
 console.log(`Plist: ${plistPath}`);
-console.log(`Logs: ${logDir}`);
+console.log(`State: ${stateDir}`);
