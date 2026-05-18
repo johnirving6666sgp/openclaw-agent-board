@@ -3,154 +3,16 @@
   "reportsDir": "/Users/aijamie4bc/Documents/AIJamie/agents/reports",
   "sourceFiles": [
     {
-      "fileName": "2026-03-26.md",
-      "bytes": 3135,
-      "modifiedAt": "2026-05-13T18:07:45.000Z",
-      "sections": 1
-    },
-    {
-      "fileName": "2026-03-29.md",
-      "bytes": 3449,
-      "modifiedAt": "2026-05-13T18:07:45.000Z",
-      "sections": 1
-    },
-    {
-      "fileName": "2026-04-08.md",
-      "bytes": 3973,
-      "modifiedAt": "2026-05-13T18:07:45.000Z",
-      "sections": 2
-    },
-    {
-      "fileName": "2026-04-09.md",
-      "bytes": 9862,
-      "modifiedAt": "2026-05-13T18:07:45.000Z",
-      "sections": 2
-    },
-    {
-      "fileName": "2026-04-11.md",
-      "bytes": 2068,
-      "modifiedAt": "2026-05-13T18:07:45.000Z",
-      "sections": 1
-    },
-    {
-      "fileName": "2026-04-12.md",
-      "bytes": 14795,
-      "modifiedAt": "2026-05-13T18:07:45.318Z",
-      "sections": 1
-    },
-    {
-      "fileName": "2026-04-14.md",
-      "bytes": 3870,
-      "modifiedAt": "2026-05-13T18:07:46.077Z",
-      "sections": 2
-    },
-    {
-      "fileName": "2026-04-15.md",
-      "bytes": 1914,
-      "modifiedAt": "2026-05-13T18:07:46.077Z",
-      "sections": 2
-    },
-    {
-      "fileName": "2026-04-17.md",
-      "bytes": 3022,
-      "modifiedAt": "2026-05-13T18:07:46.078Z",
-      "sections": 2
-    },
-    {
-      "fileName": "2026-04-20.md",
-      "bytes": 10944,
-      "modifiedAt": "2026-05-13T18:07:46.078Z",
-      "sections": 2
-    },
-    {
-      "fileName": "2026-04-21.md",
-      "bytes": 11173,
-      "modifiedAt": "2026-05-13T18:07:46.079Z",
-      "sections": 3
-    },
-    {
-      "fileName": "2026-04-22.md",
-      "bytes": 10794,
-      "modifiedAt": "2026-05-13T18:07:46.079Z",
-      "sections": 3
-    },
-    {
-      "fileName": "2026-04-23.md",
-      "bytes": 2788,
-      "modifiedAt": "2026-05-13T18:07:46.079Z",
-      "sections": 1
-    },
-    {
-      "fileName": "2026-04-24.md",
-      "bytes": 3582,
-      "modifiedAt": "2026-05-13T18:07:46.079Z",
-      "sections": 2
-    },
-    {
-      "fileName": "2026-04-26.md",
-      "bytes": 8562,
-      "modifiedAt": "2026-05-13T18:07:46.080Z",
-      "sections": 3
-    },
-    {
-      "fileName": "2026-04-30.md",
-      "bytes": 8101,
-      "modifiedAt": "2026-05-17T13:42:12.494Z",
-      "sections": 3
-    },
-    {
-      "fileName": "2026-05-07.md",
-      "bytes": 10420,
-      "modifiedAt": "2026-05-17T13:42:12.527Z",
-      "sections": 2
-    },
-    {
-      "fileName": "2026-05-09.md",
-      "bytes": 2641,
-      "modifiedAt": "2026-05-17T14:10:54.916Z",
-      "sections": 2
-    },
-    {
-      "fileName": "2026-05-10.md",
-      "bytes": 9014,
-      "modifiedAt": "2026-05-17T14:10:54.950Z",
-      "sections": 2
-    },
-    {
       "fileName": "2026-05-11.md",
       "bytes": 139,
       "modifiedAt": "2026-05-17T14:10:54.982Z",
       "sections": 1
     },
     {
-      "fileName": "2026-05-12.md",
-      "bytes": 11955,
-      "modifiedAt": "2026-05-17T14:10:55.017Z",
-      "sections": 2
-    },
-    {
       "fileName": "2026-05-13.md",
       "bytes": 1629,
       "modifiedAt": "2026-05-17T14:10:55.052Z",
       "sections": 1
-    },
-    {
-      "fileName": "2026-05-14.md",
-      "bytes": 8100,
-      "modifiedAt": "2026-05-17T19:16:16.499Z",
-      "sections": 3
-    },
-    {
-      "fileName": "2026-05-15.md",
-      "bytes": 19338,
-      "modifiedAt": "2026-05-17T19:16:16.499Z",
-      "sections": 8
-    },
-    {
-      "fileName": "2026-05-16.md",
-      "bytes": 3795,
-      "modifiedAt": "2026-05-17T14:10:55.159Z",
-      "sections": 2
     },
     {
       "fileName": "2026-05-17.md",
@@ -166,13 +28,13 @@
     }
   ],
   "warnings": [],
-  "totalReports": 62,
+  "totalReports": 10,
   "agentCounts": {
-    "企业AI大师": 9,
-    "港股大师": 13,
-    "日股大师": 5,
-    "美股大师": 23,
-    "A股大师": 12,
+    "企业AI大师": 3,
+    "港股大师": 0,
+    "日股大师": 2,
+    "美股大师": 1,
+    "A股大师": 4,
     "总管AIJamie": 0
   }
 }
