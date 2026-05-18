@@ -1,23 +1,25 @@
+import crypto from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
 const reportsDir = '/Users/aijamie4bc/Documents/AIJamie/agents/reports';
 const outFile = path.resolve('src/reportsData.js');
+const manifestFile = path.resolve('src/reportsManifest.json');
 const agents = ['企业AI大师', '港股大师', '日股大师', '美股大师', 'A股大师', '总管AIJamie'];
+const containerTitlePattern = /大师每日报告|每日报告|日报合集|报告合集/i;
 
-function inferAgent(title, fallbackContent) {
-  const text = `${title}\n${fallbackContent.slice(0, 600)}`;
-  if (/企业AI|企业 AI|企业级AI|企业级 AI|兆精summit|兆精|Agentic Enterprise|企业.*Agent/.test(text)) {
-    return '企业AI大师';
-  }
-  if (/港股|华领|HK|\.HK|恒生|港交所/.test(text)) return '港股大师';
-  if (/日股|日本|东京|Nikkei|TOPIX|日经/.test(text)) return '日股大师';
-  if (/A股|沪深|上证|深证|创业板|龙头预测|热点轮动/.test(text)) return 'A股大师';
-  if (/总管|AIJamie|总览|总监|统筹/.test(text)) return '总管AIJamie';
-  if (/美股|科技长线|王者归来|NASDAQ|Nasdaq|S&P|NVIDIA|Microsoft|Tesla|\.US/.test(text)) {
-    return '美股大师';
-  }
-  return '总管AIJamie';
+function detectAgentFromHeading(title) {
+  if (/企业AI大师|企业AI|企业 AI|企业级AI|企业级 AI|兆精summit|兆精/.test(title)) return '企业AI大师';
+  if (/港股大师|港股华领|港股观察|华领模式/.test(title)) return '港股大师';
+  if (/日股大师|日股|日本市场|Nikkei|TOPIX|日经/.test(title)) return '日股大师';
+  if (/美股大师|美股日报|美股热点|科技长线|每周深度复盘|王者归来观察清单/.test(title)) return '美股大师';
+  if (/A股大师|A股|沪深|上证|深证|创业板|龙头预测|热点轮动/.test(title)) return 'A股大师';
+  if (/总管AIJamie|AIJamie|总管/.test(title)) return '总管AIJamie';
+  return null;
+}
+
+function inferAgentFromContent(title, content) {
+  return detectAgentFromHeading(`${title}\n${content.slice(0, 1200)}`) || '总管AIJamie';
 }
 
 function stripMarkdown(value) {
@@ -33,7 +35,7 @@ function summaryFor(raw) {
   const lines = raw
     .split('\n')
     .map((line) => stripMarkdown(line))
-    .filter((line) => line && !/^生成时间/.test(line));
+    .filter((line) => line && !/^生成时间/.test(line) && !containerTitlePattern.test(line));
   return (lines.find((line) => line.length > 24) || lines[0] || '暂无摘要').slice(0, 150);
 }
 
@@ -48,58 +50,93 @@ function bulletsFor(raw) {
   return bullets.length ? bullets : [summaryFor(raw)];
 }
 
+function stableId({ agent, date, raw, source, title }) {
+  return `${date}-${agent}-${crypto
+    .createHash('sha1')
+    .update(`${source}|${date}|${agent}|${title}|${raw.slice(0, 240)}`)
+    .digest('hex')
+    .slice(0, 10)}`;
+}
+
+function cleanTitle(title) {
+  return stripMarkdown(title.replace(/^#{1,2}\s+/, '')).slice(0, 80);
+}
+
 function splitSections(content, date) {
-  const matches = [...content.matchAll(/^(#{1,2})\s+(.+)$/gm)];
-  if (!matches.length) {
-    const title = `${date} 报告`;
-    return [{ title, raw: content.trim(), agent: inferAgent(title, content) }];
+  const headings = [...content.matchAll(/^(#{1,2})\s+(.+)$/gm)].map((match) => ({
+    index: match.index,
+    title: match[2].trim(),
+    agent: detectAgentFromHeading(match[2].trim())
+  }));
+  const agentHeadings = headings.filter((heading) => heading.agent);
+
+  if (!agentHeadings.length) {
+    const title = headings.find((heading) => !containerTitlePattern.test(heading.title))?.title || `${date} 报告`;
+    return [{ agent: inferAgentFromContent(title, content), raw: content.trim(), title }];
   }
 
   const sections = [];
-  for (let index = 0; index < matches.length; index += 1) {
-    const match = matches[index];
-    const title = match[2].trim();
-    const start = match.index;
-    const end = matches[index + 1]?.index ?? content.length;
-    const raw = content.slice(start, end).trim();
-    const agent = inferAgent(title, raw);
-    const isSubsection = !agents.some((name) => title.includes(name)) && index > 0;
-    if (isSubsection && sections.length && sections.at(-1).agent === agent) {
-      sections.at(-1).raw = `${sections.at(-1).raw}\n\n${raw}`;
-    } else {
-      sections.push({ title, raw, agent });
-    }
+  const preamble = content.slice(0, agentHeadings[0].index).trim();
+  if (preamble && !containerTitlePattern.test(stripMarkdown(preamble))) {
+    const title = headings[0]?.title || `${date} 前言`;
+    sections.push({ agent: inferAgentFromContent(title, preamble), raw: preamble, title });
   }
-  return sections.filter((section) => section.raw.length > 40);
+
+  for (let index = 0; index < agentHeadings.length; index += 1) {
+    const heading = agentHeadings[index];
+    const nextHeading = agentHeadings[index + 1];
+    const raw = content.slice(heading.index, nextHeading?.index ?? content.length).trim();
+    if (raw.length > 40) sections.push({ agent: heading.agent, raw, title: heading.title });
+  }
+  return sections;
 }
 
 async function main() {
   const files = (await fs.readdir(reportsDir)).filter((name) => name.endsWith('.md')).sort();
   const reports = [];
+  const manifest = { generatedAt: new Date().toISOString(), reportsDir, sourceFiles: [], warnings: [] };
 
   for (const fileName of files) {
     const date = fileName.replace(/\.md$/, '');
-    const content = await fs.readFile(path.join(reportsDir, fileName), 'utf8');
-    splitSections(content, date).forEach((section, index) => {
+    const filePath = path.join(reportsDir, fileName);
+    const stat = await fs.stat(filePath);
+    const content = await fs.readFile(filePath, 'utf8');
+    const sections = splitSections(content, date).filter((section) => section.raw.length > 40);
+    manifest.sourceFiles.push({
+      fileName,
+      bytes: stat.size,
+      modifiedAt: stat.mtime.toISOString(),
+      sections: sections.length
+    });
+    if (!sections.length && content.trim()) manifest.warnings.push(`${fileName}: non-empty file produced no sections`);
+
+    for (const section of sections) {
+      const title = cleanTitle(section.title);
       reports.push({
-        id: `${date}-${index}`,
+        id: stableId({ agent: section.agent, date, raw: section.raw, source: fileName, title }),
         agent: section.agent,
         date,
-        title: stripMarkdown(section.title.replace(/^#+\s*/, '')).slice(0, 80),
+        title,
         summary: summaryFor(section.raw),
         bullets: bulletsFor(section.raw),
         raw: section.raw,
         source: fileName
       });
-    });
+    }
   }
 
-  reports.sort((a, b) => b.date.localeCompare(a.date));
-  const source = `export const reportAgents = ${JSON.stringify(agents, null, 2)};\n\nexport const agentReports = ${JSON.stringify(reports, null, 2)};\n`;
-  await fs.writeFile(outFile, source);
+  reports.sort((a, b) => b.date.localeCompare(a.date) || a.agent.localeCompare(b.agent));
+  manifest.totalReports = reports.length;
+  manifest.agentCounts = Object.fromEntries(agents.map((agent) => [agent, reports.filter((report) => report.agent === agent).length]));
+
+  await fs.writeFile(outFile, `export const reportAgents = ${JSON.stringify(agents, null, 2)};\n\nexport const agentReports = ${JSON.stringify(reports, null, 2)};\n`);
+  await fs.writeFile(manifestFile, `${JSON.stringify(manifest, null, 2)}\n`);
+
   console.log(`Synced ${reports.length} report sections from ${reportsDir}`);
-  for (const agent of agents) {
-    console.log(`${agent}: ${reports.filter((report) => report.agent === agent).length}`);
+  for (const agent of agents) console.log(`${agent}: ${manifest.agentCounts[agent]}`);
+  if (manifest.warnings.length) {
+    console.warn('\nWarnings:');
+    manifest.warnings.forEach((warning) => console.warn(`- ${warning}`));
   }
 }
 
