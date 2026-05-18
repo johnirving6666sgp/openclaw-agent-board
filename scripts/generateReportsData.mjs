@@ -94,12 +94,14 @@ function splitSections(content, date) {
 async function main() {
   const files = (await fs.readdir(reportsDir)).filter((name) => name.endsWith('.md')).sort();
   const reports = [];
-  const manifest = { generatedAt: new Date().toISOString(), reportsDir, sourceFiles: [], warnings: [] };
+  const manifest = { generatedAt: '', reportsDir, sourceFiles: [], warnings: [] };
+  let latestSourceModifiedMs = 0;
 
   for (const fileName of files) {
     const date = fileName.replace(/\.md$/, '');
     const filePath = path.join(reportsDir, fileName);
     const stat = await fs.stat(filePath);
+    latestSourceModifiedMs = Math.max(latestSourceModifiedMs, stat.mtimeMs);
     const content = await fs.readFile(filePath, 'utf8');
     const sections = splitSections(content, date).filter((section) => section.raw.length > 40);
     manifest.sourceFiles.push({
@@ -126,6 +128,7 @@ async function main() {
   }
 
   reports.sort((a, b) => b.date.localeCompare(a.date) || a.agent.localeCompare(b.agent));
+  manifest.generatedAt = new Date((latestSourceModifiedMs || Date.now()) + 1000).toISOString();
   manifest.totalReports = reports.length;
   manifest.agentCounts = Object.fromEntries(agents.map((agent) => [agent, reports.filter((report) => report.agent === agent).length]));
 
