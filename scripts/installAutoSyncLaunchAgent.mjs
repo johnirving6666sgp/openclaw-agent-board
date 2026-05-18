@@ -10,7 +10,7 @@ const plistPath = path.join(launchAgentsDir, `${label}.plist`);
 const logDir = path.join(root, 'logs');
 const uid = execFileSync('id', ['-u'], { encoding: 'utf8' }).trim();
 const nodePath = fs.realpathSync(process.execPath);
-const npmPath = path.join(path.dirname(nodePath), 'npm');
+const npmCliPath = path.resolve(path.dirname(nodePath), '..', 'lib', 'node_modules', 'npm', 'bin', 'npm-cli.js');
 
 fs.mkdirSync(launchAgentsDir, { recursive: true });
 fs.mkdirSync(logDir, { recursive: true });
@@ -24,7 +24,8 @@ const plist = `<?xml version="1.0" encoding="UTF-8"?>
   <string>${label}</string>
   <key>ProgramArguments</key>
   <array>
-    <string>${npmPath}</string>
+    <string>${nodePath}</string>
+    <string>${npmCliPath}</string>
     <string>run</string>
     <string>auto:reports</string>
   </array>
