@@ -45,6 +45,8 @@ function main() {
   run('git', ['commit', '-m', `Sync agent reports ${timestamp}`]);
   run('git', ['push', 'origin', 'main']);
   console.log('Published report data changes to origin/main.');
+  run('npx', ['wrangler', 'deploy']);
+  console.log('Deployed latest report data to Cloudflare.');
 }
 
 try {

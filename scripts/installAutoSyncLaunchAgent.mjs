@@ -38,7 +38,7 @@ const plist = `<?xml version="1.0" encoding="UTF-8"?>
     <string>${runnerPath}</string>
   </array>
   <key>StartInterval</key>
-  <integer>300</integer>
+  <integer>120</integer>
   <key>RunAtLoad</key>
   <true/>
   <key>StandardOutPath</key>
