@@ -4,6 +4,8 @@ import path from 'node:path';
 
 const root = path.resolve(import.meta.dirname, '..');
 const trackedFiles = ['src/reportsData.js', 'src/reportsManifest.json'];
+const logDir = path.join(root, 'logs');
+const deployedCommitPath = path.join(logDir, 'last-deployed-commit.txt');
 
 function run(command, args, options = {}) {
   return execFileSync(command, args, {
@@ -28,6 +30,32 @@ function hasUntracked(files) {
   return status.trim().length > 0;
 }
 
+function currentCommit() {
+  return run('git', ['rev-parse', 'HEAD'], { capture: true }).trim();
+}
+
+function lastDeployedCommit() {
+  try {
+    return fs.readFileSync(deployedCommitPath, 'utf8').trim();
+  } catch {
+    return '';
+  }
+}
+
+function deployIfNeeded(reason) {
+  const commit = currentCommit();
+  if (lastDeployedCommit() === commit) {
+    console.log(`Cloudflare already deployed for ${commit.slice(0, 7)}.`);
+    return;
+  }
+
+  console.log(`Deploying ${commit.slice(0, 7)} to Cloudflare (${reason}).`);
+  run('npx', ['wrangler', 'deploy']);
+  fs.mkdirSync(logDir, { recursive: true });
+  fs.writeFileSync(deployedCommitPath, `${commit}\n`);
+  console.log('Deployed latest report data to Cloudflare.');
+}
+
 function main() {
   console.log(`[${new Date().toISOString()}] syncing reports`);
   run('git', ['fetch', 'origin', 'main']);
@@ -37,6 +65,7 @@ function main() {
 
   if (!hasDiff(trackedFiles) && !hasUntracked(trackedFiles)) {
     console.log('No report data changes to publish.');
+    deployIfNeeded('retry or non-report commit');
     return;
   }
 
@@ -45,14 +74,12 @@ function main() {
   run('git', ['commit', '-m', `Sync agent reports ${timestamp}`]);
   run('git', ['push', 'origin', 'main']);
   console.log('Published report data changes to origin/main.');
-  run('npx', ['wrangler', 'deploy']);
-  console.log('Deployed latest report data to Cloudflare.');
+  deployIfNeeded('report data changed');
 }
 
 try {
   main();
 } catch (error) {
-  const logDir = path.join(root, 'logs');
   fs.mkdirSync(logDir, { recursive: true });
   fs.appendFileSync(
     path.join(logDir, 'auto-sync-errors.log'),
