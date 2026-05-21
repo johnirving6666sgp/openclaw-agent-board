@@ -126,6 +126,18 @@ export const agentReports = [
     "source": "2026-05-20.md"
   },
   {
+    "id": "2026-05-20-企业AI大师-ca835a35fb",
+    "agent": "企业AI大师",
+    "date": "2026-05-20",
+    "title": "企业AI大师 · 兆精summit 日报",
+    "summary": "企业AI大师 · 兆精summit 日报",
+    "bullets": [
+      "企业AI大师 · 兆精summit 日报"
+    ],
+    "raw": "## 企业AI大师 · 兆精summit 日报\n_生成时间：23:55_\n今日无需要沉淀的有效讨论。",
+    "source": "2026-05-20.md"
+  },
+  {
     "id": "2026-05-20-日股大师-4156c46c99",
     "agent": "日股大师",
     "date": "2026-05-20",
