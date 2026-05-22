@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T00:05:44.654Z",
+  "generatedAt": "2026-05-22T01:02:01.262Z",
   "reportsDir": "/Users/aijamie4bc/Documents/AIJamie/agents/reports",
   "sourceFiles": [
     {
@@ -178,16 +178,16 @@
     },
     {
       "fileName": "2026-05-21.md",
-      "bytes": 35907,
-      "modifiedAt": "2026-05-22T00:05:43.655Z",
-      "sections": 6
+      "bytes": 37323,
+      "modifiedAt": "2026-05-22T01:02:00.262Z",
+      "sections": 7
     }
   ],
   "warnings": [],
-  "totalReports": 86,
+  "totalReports": 87,
   "agentCounts": {
     "企业AI大师": 12,
-    "港股大师": 16,
+    "港股大师": 17,
     "日股大师": 8,
     "美股大师": 26,
     "A股大师": 24,
