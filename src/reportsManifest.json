@@ -1,6 +1,9 @@
 {
   "generatedAt": "2026-05-23T06:55:51.873Z",
+  "sourceMode": "vault",
+  "sourceRoot": "/Users/aijamie4bc/Documents/AIJamie/agents/reports",
   "reportsDir": "/Users/aijamie4bc/Documents/AIJamie/agents/reports",
+  "inboxDir": "/Users/aijamie4bc/Documents/AIJamie/agent-inbox",
   "sourceFiles": [
     {
       "fileName": "2026-03-26.md",

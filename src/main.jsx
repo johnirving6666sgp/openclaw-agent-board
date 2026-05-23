@@ -62,14 +62,14 @@ function App() {
             </div>
             <div>
               <strong>OpenClaw 输出看板</strong>
-              <span>Obsidian reports 阅读页</span>
+              <span>Report Inbox 阅读页</span>
             </div>
           </div>
 
           <div className="hero-copy">
             <p className="eyebrow">Agent Reports</p>
             <h1>六个大师板块</h1>
-            <p>从 Obsidian vault 的 agents/reports 读取报告，按 Agent 汇总成手机优先阅读流。</p>
+            <p>优先读取 Agent 原始报告入口，兼容 Obsidian vault，按 Agent 汇总成手机优先阅读流。</p>
           </div>
         </header>
 
@@ -157,7 +157,7 @@ function ReportCard({ report, expanded, onToggle }) {
             <CalendarDays size={14} />
             {report.date}
           </span>
-          <span>{report.source}</span>
+          <span>{report.origin === 'inbox' ? 'Inbox' : 'Vault'} · {report.source}</span>
         </div>
         <h3>{report.title}</h3>
         <p>{report.summary}</p>
