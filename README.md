@@ -75,6 +75,12 @@ A股大师     -> a-stock-master
 
 同步脚本会合并 Inbox 与旧 Vault reports：同一日期、同一 Agent、同一标题时，优先使用 Inbox 的完整原文；其他还没迁移的旧报告继续保留。
 
+仓库里的 `scripts/append_report.py` 是这个入口脚本的规范副本；当前实际运行位置是：
+
+```text
+~/.openclaw/workspace/scripts/append_report.py
+```
+
 当前版本生成了一个前端数据快照：`src/reportsData.js`。如果报告更新，运行：
 
 ```bash
