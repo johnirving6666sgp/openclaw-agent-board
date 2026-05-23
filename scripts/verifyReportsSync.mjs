@@ -8,21 +8,28 @@ const sourceRoot = manifest.sourceRoot || manifest.reportsDir;
 const ignoreDirs = new Set(['_inbox']);
 const sourceFiles = [];
 
-async function walk(dir) {
+async function walk(root, dir = root, prefix = '') {
   for (const entry of await fs.readdir(dir, { withFileTypes: true })) {
     if (entry.name.startsWith('.')) continue;
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      if (!ignoreDirs.has(entry.name)) await walk(fullPath);
+      if (!ignoreDirs.has(entry.name)) await walk(root, fullPath, prefix);
     } else if (entry.isFile() && entry.name.endsWith('.md')) {
-      sourceFiles.push(path.relative(sourceRoot, fullPath));
+      sourceFiles.push(prefix + path.relative(root, fullPath));
     }
   }
 }
 
-await walk(sourceRoot);
+if (manifest.sourceMode === 'hybrid') {
+  await walk(manifest.inboxDir, manifest.inboxDir, 'inbox:');
+  await walk(manifest.reportsDir, manifest.reportsDir, 'vault:');
+} else {
+  await walk(sourceRoot);
+}
 sourceFiles.sort();
-const manifestFiles = manifest.sourceFiles.map((file) => file.fileName).sort();
+const manifestFiles = manifest.sourceFiles
+  .map((file) => (manifest.sourceMode === 'hybrid' ? `${file.sourceType}:${file.fileName}` : file.fileName))
+  .sort();
 
 if (sourceFiles.length !== manifestFiles.length) {
   errors.push(`source file count mismatch: vault=${sourceFiles.length}, manifest=${manifestFiles.length}`);
@@ -33,7 +40,13 @@ for (const fileName of sourceFiles) {
 }
 
 for (const sourceFile of manifest.sourceFiles) {
-  const filePath = path.join(sourceRoot, sourceFile.fileName);
+  const root =
+    manifest.sourceMode === 'hybrid' && sourceFile.sourceType === 'vault'
+      ? manifest.reportsDir
+      : manifest.sourceMode === 'hybrid' && sourceFile.sourceType === 'inbox'
+        ? manifest.inboxDir
+        : sourceRoot;
+  const filePath = path.join(root, sourceFile.fileName);
   try {
     const stat = await fs.stat(filePath);
     if (stat.size !== sourceFile.bytes) errors.push(`${sourceFile.fileName}: file size changed after sync`);

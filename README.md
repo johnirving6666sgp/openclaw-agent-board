@@ -47,6 +47,34 @@ createdAt: 2026-05-23T10:00:00+08:00
 
 这样完整原文会先进入 Inbox，再同时生成网站数据和 Obsidian 阅读副本。AIJamie 后续可以从 Inbox 原文做总管总结，但不再覆盖原始报告。
 
+### 让各位大师写入 Inbox
+
+推荐所有大师统一使用已有脚本：
+
+```bash
+python3 ~/.openclaw/workspace/scripts/append_report.py --agent "A股大师" --title "10:00 第二报" <<'EOF'
+完整报告原文……
+EOF
+```
+
+这个脚本现在会双写：
+
+1. 继续写入旧的每日汇总：`~/.openclaw/workspace/reports/YYYY-MM-DD.md`
+2. 同时写入原始报告入口：`/Users/aijamie4bc/Documents/AIJamie/agent-inbox/<agent-folder>/YYYY-MM-DD-<hash>.md`
+
+Agent 名称对应目录：
+
+```text
+企业AI大师  -> enterprise-ai-master
+港股大师    -> hk-stock-master
+日股大师    -> jp-stock-master
+美股大师    -> us-stock-master
+A股大师     -> a-stock-master
+总管AIJamie -> jamie-chief
+```
+
+同步脚本会合并 Inbox 与旧 Vault reports：同一日期、同一 Agent、同一标题时，优先使用 Inbox 的完整原文；其他还没迁移的旧报告继续保留。
+
 当前版本生成了一个前端数据快照：`src/reportsData.js`。如果报告更新，运行：
 
 ```bash

@@ -90,6 +90,10 @@ function stableId({ agent, date, raw, source, title }) {
     .slice(0, 10)}`;
 }
 
+function reportKey(report) {
+  return `${report.date}|${report.agent}|${report.title}`;
+}
+
 function cleanTitle(title) {
   return stripMarkdown(title.replace(/^#{1,2}\s+/, '')).slice(0, 80);
 }
@@ -299,16 +303,33 @@ async function main() {
   await Promise.all(inboxAgentFolders.map((folder) => fs.mkdir(path.join(inboxDir, folder), { recursive: true })));
 
   const inboxFiles = await readMarkdownFiles(inboxDir);
-  const sourceMode = inboxFiles.length ? 'inbox' : 'vault';
-  const sourceRoot = sourceMode === 'inbox' ? inboxDir : reportsDir;
+  const vaultFiles = await readMarkdownFiles(reportsDir, new Set(['_inbox']));
+  const sourceMode = inboxFiles.length ? 'hybrid' : 'vault';
+  const sourceRoot = sourceMode === 'hybrid' ? inboxDir : reportsDir;
   const manifest = { generatedAt: '', sourceMode, sourceRoot, reportsDir, inboxDir, sourceFiles: [], warnings: [] };
-  const collected =
-    sourceMode === 'inbox'
-      ? await collectInboxReports(inboxFiles, manifest)
-      : await collectVaultReports(await readMarkdownFiles(reportsDir, new Set(['_inbox'])), manifest);
-  const { latestSourceModifiedMs, reports } = collected;
+  const inboxManifest = { sourceFiles: [], warnings: [] };
+  const vaultManifest = { sourceFiles: [], warnings: [] };
+  const inboxCollected = await collectInboxReports(inboxFiles, inboxManifest);
+  const vaultCollected = await collectVaultReports(vaultFiles, vaultManifest);
+  const latestSourceModifiedMs = Math.max(
+    inboxCollected.latestSourceModifiedMs,
+    vaultCollected.latestSourceModifiedMs
+  );
+  const reportsByKey = new Map();
 
-  if (sourceMode === 'inbox') await exportInboxToVault(reports);
+  for (const report of vaultCollected.reports) reportsByKey.set(reportKey(report), report);
+  for (const report of inboxCollected.reports) reportsByKey.set(reportKey(report), report);
+
+  const reports = [...reportsByKey.values()];
+  manifest.sourceFiles = [
+    ...inboxManifest.sourceFiles.map((file) => ({ ...file, sourceType: 'inbox' })),
+    ...vaultManifest.sourceFiles.map((file) => ({ ...file, sourceType: 'vault' }))
+  ];
+  manifest.warnings = [...inboxManifest.warnings, ...vaultManifest.warnings];
+  manifest.inboxFiles = inboxManifest.sourceFiles.length;
+  manifest.vaultFiles = vaultManifest.sourceFiles.length;
+
+  if (inboxCollected.reports.length) await exportInboxToVault(inboxCollected.reports);
 
   reports.sort((a, b) => b.date.localeCompare(a.date) || a.agent.localeCompare(b.agent));
   manifest.generatedAt = new Date((latestSourceModifiedMs || Date.now()) + 1000).toISOString();
@@ -318,8 +339,9 @@ async function main() {
   await fs.writeFile(outFile, `export const reportAgents = ${JSON.stringify(agents, null, 2)};\n\nexport const agentReports = ${JSON.stringify(reports, null, 2)};\n`);
   await fs.writeFile(manifestFile, `${JSON.stringify(manifest, null, 2)}\n`);
 
-  console.log(`Synced ${reports.length} report sections from ${sourceRoot} (${sourceMode})`);
-  if (sourceMode === 'inbox') console.log(`Exported Obsidian reading copies to ${inboxVaultOutDir}`);
+  console.log(`Synced ${reports.length} report sections (${sourceMode})`);
+  console.log(`Inbox files: ${manifest.inboxFiles}; Vault files: ${manifest.vaultFiles}`);
+  if (inboxCollected.reports.length) console.log(`Exported Obsidian reading copies to ${inboxVaultOutDir}`);
   for (const agent of agents) console.log(`${agent}: ${manifest.agentCounts[agent]}`);
   if (manifest.warnings.length) {
     console.warn('\nWarnings:');
