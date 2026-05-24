@@ -33,10 +33,46 @@ const agentFolderMap = {
 };
 const externalReportSources = [
   {
+    name: 'workspace-astock',
+    agent: 'A股大师',
+    sourceDir: '/Users/aijamie4bc/.openclaw/workspace-astock/reports',
+    inboxFolder: 'a-stock-master'
+  },
+  {
+    name: 'workspace-hkstock',
+    agent: '港股大师',
+    sourceDir: '/Users/aijamie4bc/.openclaw/workspace-hkstock/reports',
+    inboxFolder: 'hk-stock-master'
+  },
+  {
+    name: 'workspace-jpstock',
+    agent: '日股大师',
+    sourceDir: '/Users/aijamie4bc/.openclaw/workspace-jpstock/reports',
+    inboxFolder: 'jp-stock-master'
+  },
+  {
     name: 'workspace-usstock',
     agent: '美股大师',
     sourceDir: '/Users/aijamie4bc/.openclaw/workspace-usstock/reports',
     inboxFolder: 'us-stock-master'
+  },
+  {
+    name: 'workspace-giganmaster',
+    agent: '企业AI大师',
+    sourceDir: '/Users/aijamie4bc/.openclaw/workspace-giganmaster/reports',
+    inboxFolder: 'enterprise-ai-master'
+  },
+  {
+    name: 'workspace-engbot',
+    agent: '企业AI大师',
+    sourceDir: '/Users/aijamie4bc/.openclaw/workspace-engbot/reports',
+    inboxFolder: 'enterprise-ai-master'
+  },
+  {
+    name: 'workspace-megalean',
+    agent: '企业AI大师',
+    sourceDir: '/Users/aijamie4bc/.openclaw/workspace-megalean/reports',
+    inboxFolder: 'enterprise-ai-master'
   }
 ];
 

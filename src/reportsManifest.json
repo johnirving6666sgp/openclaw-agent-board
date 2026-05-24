@@ -1,19 +1,433 @@
 {
-  "generatedAt": "2026-05-24T01:22:33.408Z",
+  "generatedAt": "2026-05-24T01:28:14.009Z",
   "sourceMode": "hybrid",
   "sourceRoot": "/Users/aijamie4bc/Documents/AIJamie/agent-inbox",
   "reportsDir": "/Users/aijamie4bc/Documents/AIJamie/agents/reports",
   "inboxDir": "/Users/aijamie4bc/Documents/AIJamie/agent-inbox",
   "externalReportSources": [
     {
+      "name": "workspace-astock",
+      "agent": "A股大师",
+      "sourceDir": "/Users/aijamie4bc/.openclaw/workspace-astock/reports",
+      "inboxFolder": "a-stock-master"
+    },
+    {
+      "name": "workspace-hkstock",
+      "agent": "港股大师",
+      "sourceDir": "/Users/aijamie4bc/.openclaw/workspace-hkstock/reports",
+      "inboxFolder": "hk-stock-master"
+    },
+    {
+      "name": "workspace-jpstock",
+      "agent": "日股大师",
+      "sourceDir": "/Users/aijamie4bc/.openclaw/workspace-jpstock/reports",
+      "inboxFolder": "jp-stock-master"
+    },
+    {
       "name": "workspace-usstock",
       "agent": "美股大师",
       "sourceDir": "/Users/aijamie4bc/.openclaw/workspace-usstock/reports",
       "inboxFolder": "us-stock-master"
+    },
+    {
+      "name": "workspace-giganmaster",
+      "agent": "企业AI大师",
+      "sourceDir": "/Users/aijamie4bc/.openclaw/workspace-giganmaster/reports",
+      "inboxFolder": "enterprise-ai-master"
+    },
+    {
+      "name": "workspace-engbot",
+      "agent": "企业AI大师",
+      "sourceDir": "/Users/aijamie4bc/.openclaw/workspace-engbot/reports",
+      "inboxFolder": "enterprise-ai-master"
+    },
+    {
+      "name": "workspace-megalean",
+      "agent": "企业AI大师",
+      "sourceDir": "/Users/aijamie4bc/.openclaw/workspace-megalean/reports",
+      "inboxFolder": "enterprise-ai-master"
     }
   ],
-  "importedExternalReports": 50,
+  "importedExternalReports": 104,
   "sourceFiles": [
+    {
+      "fileName": "a-stock-master/workspace-astock-2026-03-24.md",
+      "bytes": 1092,
+      "modifiedAt": "2026-05-24T01:28:12.991Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "a-stock-master/workspace-astock-2026-03-27.md",
+      "bytes": 936,
+      "modifiedAt": "2026-05-24T01:28:12.991Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "a-stock-master/workspace-astock-2026-04-01.md",
+      "bytes": 831,
+      "modifiedAt": "2026-05-24T01:28:12.992Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "a-stock-master/workspace-astock-2026-04-02.md",
+      "bytes": 1565,
+      "modifiedAt": "2026-05-24T01:28:12.992Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "a-stock-master/workspace-astock-2026-04-03.md",
+      "bytes": 708,
+      "modifiedAt": "2026-05-24T01:28:12.993Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "a-stock-master/workspace-astock-2026-04-09.md",
+      "bytes": 823,
+      "modifiedAt": "2026-05-24T01:28:12.993Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "a-stock-master/workspace-astock-2026-04-14.md",
+      "bytes": 1011,
+      "modifiedAt": "2026-05-24T01:28:12.993Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "a-stock-master/workspace-astock-2026-04-27.md",
+      "bytes": 805,
+      "modifiedAt": "2026-05-24T01:28:12.994Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "a-stock-master/workspace-astock-2026-04-29.md",
+      "bytes": 762,
+      "modifiedAt": "2026-05-24T01:28:12.995Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "a-stock-master/workspace-astock-2026-05-06.md",
+      "bytes": 839,
+      "modifiedAt": "2026-05-24T01:28:12.995Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "a-stock-master/workspace-astock-2026-05-11.md",
+      "bytes": 566,
+      "modifiedAt": "2026-05-24T01:28:12.996Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "a-stock-master/workspace-astock-2026-05-13.md",
+      "bytes": 720,
+      "modifiedAt": "2026-05-24T01:28:12.996Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "a-stock-master/workspace-astock-2026-05-15.md",
+      "bytes": 913,
+      "modifiedAt": "2026-05-24T01:28:12.996Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-05.md",
+      "bytes": 936,
+      "modifiedAt": "2026-05-24T01:28:12.997Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-06.md",
+      "bytes": 904,
+      "modifiedAt": "2026-05-24T01:28:12.997Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-07.md",
+      "bytes": 795,
+      "modifiedAt": "2026-05-24T01:28:12.998Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-08.md",
+      "bytes": 1677,
+      "modifiedAt": "2026-05-24T01:28:12.998Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-09.md",
+      "bytes": 1090,
+      "modifiedAt": "2026-05-24T01:28:12.998Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-10.md",
+      "bytes": 2247,
+      "modifiedAt": "2026-05-24T01:28:12.999Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-11.md",
+      "bytes": 1198,
+      "modifiedAt": "2026-05-24T01:28:12.999Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-12.md",
+      "bytes": 1081,
+      "modifiedAt": "2026-05-24T01:28:12.999Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-13.md",
+      "bytes": 1055,
+      "modifiedAt": "2026-05-24T01:28:13.000Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-14.md",
+      "bytes": 1196,
+      "modifiedAt": "2026-05-24T01:28:13.000Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-15.md",
+      "bytes": 1933,
+      "modifiedAt": "2026-05-24T01:28:13.000Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-16.md",
+      "bytes": 2038,
+      "modifiedAt": "2026-05-24T01:28:13.000Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-17.md",
+      "bytes": 6165,
+      "modifiedAt": "2026-05-24T01:28:13.001Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-18.md",
+      "bytes": 992,
+      "modifiedAt": "2026-05-24T01:28:13.001Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-20.md",
+      "bytes": 1964,
+      "modifiedAt": "2026-05-24T01:28:13.001Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-21.md",
+      "bytes": 1465,
+      "modifiedAt": "2026-05-24T01:28:13.002Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-22.md",
+      "bytes": 2169,
+      "modifiedAt": "2026-05-24T01:28:13.002Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-23.md",
+      "bytes": 949,
+      "modifiedAt": "2026-05-24T01:28:13.002Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-24.md",
+      "bytes": 5192,
+      "modifiedAt": "2026-05-24T01:28:13.002Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-25.md",
+      "bytes": 1088,
+      "modifiedAt": "2026-05-24T01:28:13.003Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-27.md",
+      "bytes": 1431,
+      "modifiedAt": "2026-05-24T01:28:13.003Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-28.md",
+      "bytes": 2105,
+      "modifiedAt": "2026-05-24T01:28:13.003Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-29.md",
+      "bytes": 824,
+      "modifiedAt": "2026-05-24T01:28:13.004Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-04-30.md",
+      "bytes": 1594,
+      "modifiedAt": "2026-05-24T01:28:13.004Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-05-01.md",
+      "bytes": 3778,
+      "modifiedAt": "2026-05-24T01:28:13.005Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-05-05.md",
+      "bytes": 1099,
+      "modifiedAt": "2026-05-24T01:28:13.005Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-05-06.md",
+      "bytes": 1929,
+      "modifiedAt": "2026-05-24T01:28:13.005Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-05-07.md",
+      "bytes": 1252,
+      "modifiedAt": "2026-05-24T01:28:13.006Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-05-08.md",
+      "bytes": 1057,
+      "modifiedAt": "2026-05-24T01:28:13.006Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-05-09.md",
+      "bytes": 1393,
+      "modifiedAt": "2026-05-24T01:28:13.006Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-05-10.md",
+      "bytes": 795,
+      "modifiedAt": "2026-05-24T01:28:13.006Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-05-11.md",
+      "bytes": 1337,
+      "modifiedAt": "2026-05-24T01:28:13.007Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-05-12.md",
+      "bytes": 2419,
+      "modifiedAt": "2026-05-24T01:28:13.007Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-05-13.md",
+      "bytes": 2068,
+      "modifiedAt": "2026-05-24T01:28:13.007Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-05-14.md",
+      "bytes": 2424,
+      "modifiedAt": "2026-05-24T01:28:13.007Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-05-15.md",
+      "bytes": 1431,
+      "modifiedAt": "2026-05-24T01:28:13.008Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-05-17.md",
+      "bytes": 1251,
+      "modifiedAt": "2026-05-24T01:28:13.008Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-05-18.md",
+      "bytes": 1541,
+      "modifiedAt": "2026-05-24T01:28:13.009Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-05-19.md",
+      "bytes": 1061,
+      "modifiedAt": "2026-05-24T01:28:13.009Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-05-21.md",
+      "bytes": 1842,
+      "modifiedAt": "2026-05-24T01:28:13.009Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "hk-stock-master/workspace-hkstock-2026-05-23.md",
+      "bytes": 1865,
+      "modifiedAt": "2026-05-24T01:28:13.010Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-03-23.md",
       "bytes": 2366,
@@ -583,15 +997,15 @@
     }
   ],
   "warnings": [],
-  "inboxFiles": 50,
+  "inboxFiles": 104,
   "vaultFiles": 31,
-  "totalReports": 143,
+  "totalReports": 196,
   "agentCounts": {
     "企业AI大师": 14,
-    "港股大师": 19,
+    "港股大师": 59,
     "日股大师": 8,
     "美股大师": 76,
-    "A股大师": 26,
+    "A股大师": 39,
     "总管AIJamie": 0
   }
 }

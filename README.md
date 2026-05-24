@@ -84,16 +84,22 @@ A股大师     -> a-stock-master
 另外，部分大师有自己的独立 workspace。当前已接入：
 
 ```text
-美股大师：~/.openclaw/workspace-usstock/reports/*.md
+A股大师：    ~/.openclaw/workspace-astock/reports/*.md
+港股大师：   ~/.openclaw/workspace-hkstock/reports/*.md
+日股大师：   ~/.openclaw/workspace-jpstock/reports/*.md
+美股大师：   ~/.openclaw/workspace-usstock/reports/*.md
+企业AI大师： ~/.openclaw/workspace-giganmaster/reports/*.md
+企业AI大师： ~/.openclaw/workspace-engbot/reports/*.md
+企业AI大师： ~/.openclaw/workspace-megalean/reports/*.md
 ```
 
 这些外部 reports 会在同步时自动导入到：
 
 ```text
-/Users/aijamie4bc/Documents/AIJamie/agent-inbox/us-stock-master/
+/Users/aijamie4bc/Documents/AIJamie/agent-inbox/<对应大师目录>/
 ```
 
-因此即使美股大师仍直接写 `workspace-usstock/reports/YYYY-MM-DD.md`，小看板也会读取到完整原文。
+因此即使某个大师仍直接写自己 workspace 下的 `reports/YYYY-MM-DD.md`，小看板也会读取到完整原文。
 
 当前版本生成了一个前端数据快照：`src/reportsData.js`。如果报告更新，运行：
 
