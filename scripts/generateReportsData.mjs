@@ -63,12 +63,6 @@ const externalReportSources = [
     inboxFolder: 'enterprise-ai-master'
   },
   {
-    name: 'workspace-engbot',
-    agent: '企业AI大师',
-    sourceDir: '/Users/aijamie4bc/.openclaw/workspace-engbot/reports',
-    inboxFolder: 'enterprise-ai-master'
-  },
-  {
     name: 'workspace-megalean',
     agent: '企业AI大师',
     sourceDir: '/Users/aijamie4bc/.openclaw/workspace-megalean/reports',
