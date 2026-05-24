@@ -47,6 +47,48 @@ createdAt: 2026-05-23T10:00:00+08:00
 
 这样完整原文会先进入 Inbox，再同时生成网站数据和 Obsidian 阅读副本。AIJamie 后续可以从 Inbox 原文做总管总结，但不再覆盖原始报告。
 
+## AIJamie 任务分发层
+
+AIJamie 除了写入自己的总管报告，还负责把和 James 的战略对话提炼成研究任务，再分发给各位大师。
+
+任务入口目录：
+
+```text
+/Users/aijamie4bc/Documents/AIJamie/agent-tasks
+```
+
+目录结构：
+
+```text
+agent-tasks/
+  enterprise-ai-master/
+  hk-stock-master/
+  jp-stock-master/
+  us-stock-master/
+  a-stock-master/
+  jamie-chief/
+```
+
+推荐 AIJamie 使用：
+
+```bash
+python3 ~/.openclaw/workspace/scripts/dispatch_task.py \
+  --topic "AI工业革命" \
+  --agent "美股大师:NVDA,PLTR,CRDO" \
+  --agent "日股大师:软银集团,Advantest,东京电子" \
+  --agent "港股大师:腾讯,中芯国际,舜宇光学" \
+  --agent "A股大师:工业富联,寒武纪,中际旭创" <<'EOF'
+这里放 James 和 AIJamie 对话后提炼出的背景、判断、公司线索和研究问题。
+EOF
+```
+
+脚本会同时写入：
+
+1. AIJamie 自己的对话提炼：`agent-inbox/jamie-chief/`
+2. 各大师的任务单：`agent-tasks/<agent-folder>/`
+
+各大师后续生成日报前，应先检查自己的任务目录；如果有新任务，就研究任务里的公司，并把结论通过 `append_report.py` 写入自己的报告。
+
 ### 让各位大师写入 Inbox
 
 推荐所有大师统一使用已有脚本：
@@ -79,6 +121,12 @@ A股大师     -> a-stock-master
 
 ```text
 ~/.openclaw/workspace/scripts/append_report.py
+```
+
+仓库里的 `scripts/dispatch_task.py` 是 AIJamie 任务分发脚本的规范副本；当前实际运行位置是：
+
+```text
+~/.openclaw/workspace/scripts/dispatch_task.py
 ```
 
 另外，部分大师有自己的独立 workspace。当前已接入：
