@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-24T01:28:14.009Z",
+  "generatedAt": "2026-05-24T01:33:40.713Z",
   "sourceMode": "hybrid",
   "sourceRoot": "/Users/aijamie4bc/Documents/AIJamie/agent-inbox",
   "reportsDir": "/Users/aijamie4bc/Documents/AIJamie/agents/reports",
@@ -48,7 +48,7 @@
       "inboxFolder": "enterprise-ai-master"
     }
   ],
-  "importedExternalReports": 104,
+  "importedExternalReports": 109,
   "sourceFiles": [
     {
       "fileName": "a-stock-master/workspace-astock-2026-03-24.md",
@@ -425,6 +425,41 @@
       "fileName": "hk-stock-master/workspace-hkstock-2026-05-23.md",
       "bytes": 1865,
       "modifiedAt": "2026-05-24T01:28:13.010Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "jp-stock-master/workspace-jpstock-2026-04-10.md",
+      "bytes": 1204,
+      "modifiedAt": "2026-05-24T01:33:39.712Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "jp-stock-master/workspace-jpstock-2026-04-16.md",
+      "bytes": 1213,
+      "modifiedAt": "2026-05-24T01:33:39.712Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "jp-stock-master/workspace-jpstock-2026-04-24.md",
+      "bytes": 1552,
+      "modifiedAt": "2026-05-24T01:33:39.712Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "jp-stock-master/workspace-jpstock-2026-04-29.md",
+      "bytes": 1423,
+      "modifiedAt": "2026-05-24T01:33:39.713Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "jp-stock-master/workspace-jpstock-2026-05-23.md",
+      "bytes": 1290,
+      "modifiedAt": "2026-05-24T01:33:39.713Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -997,13 +1032,13 @@
     }
   ],
   "warnings": [],
-  "inboxFiles": 104,
+  "inboxFiles": 109,
   "vaultFiles": 31,
-  "totalReports": 196,
+  "totalReports": 201,
   "agentCounts": {
     "企业AI大师": 14,
     "港股大师": 59,
-    "日股大师": 8,
+    "日股大师": 13,
     "美股大师": 76,
     "A股大师": 39,
     "总管AIJamie": 0
