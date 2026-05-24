@@ -62,12 +62,6 @@ const externalReportSources = [
     sourceDir: '/Users/aijamie4bc/.openclaw/workspace-giganmaster/reports',
     inboxFolder: 'enterprise-ai-master'
   },
-  {
-    name: 'workspace-megalean',
-    agent: '企业AI大师',
-    sourceDir: '/Users/aijamie4bc/.openclaw/workspace-megalean/reports',
-    inboxFolder: 'enterprise-ai-master'
-  }
 ];
 const externalSingleFileSources = [
   {

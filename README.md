@@ -89,7 +89,6 @@ A股大师：    ~/.openclaw/workspace-astock/reports/*.md
 日股大师：   ~/.openclaw/workspace-jpstock/reports/*.md
 美股大师：   ~/.openclaw/workspace-usstock/reports/*.md
 企业AI大师： ~/.openclaw/workspace-giganmaster/reports/*.md
-企业AI大师： ~/.openclaw/workspace-megalean/reports/*.md
 ```
 
 这些外部 reports 会在同步时自动导入到：
