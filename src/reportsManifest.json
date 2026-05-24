@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-24T17:02:44.020Z",
+  "generatedAt": "2026-05-24T18:17:34.460Z",
   "sourceMode": "hybrid",
   "sourceRoot": "/Users/aijamie4bc/Documents/AIJamie/agent-inbox",
   "reportsDir": "/Users/aijamie4bc/Documents/AIJamie/agents/reports",
@@ -48,7 +48,16 @@
       "inboxFolder": "enterprise-ai-master"
     }
   ],
-  "importedExternalReports": 111,
+  "externalSingleFileSources": [
+    {
+      "name": "workflow-supervisor",
+      "agent": "总管AIJamie",
+      "sourcePath": "/tmp/workflow_supervision_report.md",
+      "inboxFolder": "jamie-chief",
+      "title": "总管AIJamie · 工作流监督报告"
+    }
+  ],
+  "importedExternalReports": 112,
   "sourceFiles": [
     {
       "fileName": "a-stock-master/workspace-astock-2026-03-24.md",
@@ -439,6 +448,20 @@
       "fileName": "hk-stock-master/workspace-hkstock-2026-05-24.md",
       "bytes": 1345,
       "modifiedAt": "2026-05-24T17:02:43.021Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "jamie-chief/workflow-supervisor-2026-05-23.md",
+      "bytes": 1487,
+      "modifiedAt": "2026-05-24T18:15:47.069Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "jamie-chief/workflow-supervisor-2026-05-24.md",
+      "bytes": 1487,
+      "modifiedAt": "2026-05-24T18:17:33.461Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -1060,15 +1083,15 @@
     }
   ],
   "warnings": [],
-  "inboxFiles": 112,
+  "inboxFiles": 114,
   "vaultFiles": 32,
-  "totalReports": 204,
+  "totalReports": 206,
   "agentCounts": {
     "企业AI大师": 15,
     "港股大师": 60,
     "日股大师": 13,
     "美股大师": 77,
     "A股大师": 39,
-    "总管AIJamie": 0
+    "总管AIJamie": 2
   }
 }

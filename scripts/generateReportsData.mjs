@@ -75,6 +75,15 @@ const externalReportSources = [
     inboxFolder: 'enterprise-ai-master'
   }
 ];
+const externalSingleFileSources = [
+  {
+    name: 'workflow-supervisor',
+    agent: '总管AIJamie',
+    sourcePath: '/tmp/workflow_supervision_report.md',
+    inboxFolder: 'jamie-chief',
+    title: '总管AIJamie · 工作流监督报告'
+  }
+];
 
 function detectAgentFromHeading(title) {
   if (/企业AI大师|企业AI|企业 AI|企业级AI|企业级 AI|兆精summit|兆精/.test(title)) return '企业AI大师';
@@ -276,6 +285,36 @@ async function importExternalReportsToInbox() {
       imported.push({ changed, inboxPath, source: filePath });
     }
   }
+  for (const source of externalSingleFileSources) {
+    try {
+      await fs.access(source.sourcePath);
+    } catch {
+      continue;
+    }
+
+    const content = (await fs.readFile(source.sourcePath, 'utf8')).trim();
+    if (content.length <= 40) continue;
+
+    const stat = await fs.stat(source.sourcePath);
+    const date =
+      content.match(/\d{4}-\d{2}-\d{2}/)?.[0] ||
+      stat.mtime.toISOString().slice(0, 10);
+    const body = [
+      '---',
+      `agent: ${yamlQuote(source.agent)}`,
+      `date: ${date}`,
+      `title: ${yamlQuote(source.title)}`,
+      `createdAt: ${stat.mtime.toISOString()}`,
+      `source: ${yamlQuote(source.name)}`,
+      '---',
+      '',
+      content,
+      ''
+    ].join('\n');
+    const inboxPath = path.join(inboxDir, source.inboxFolder, `${source.name}-${date}.md`);
+    const changed = await writeIfChanged(inboxPath, body);
+    imported.push({ changed, inboxPath, source: source.sourcePath });
+  }
   return imported;
 }
 
@@ -409,6 +448,7 @@ async function main() {
     reportsDir,
     inboxDir,
     externalReportSources,
+    externalSingleFileSources,
     importedExternalReports: importedExternalReports.length,
     sourceFiles: [],
     warnings: []
