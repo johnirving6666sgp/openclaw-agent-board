@@ -9,6 +9,22 @@ export const reportAgents = [
 
 export const agentReports = [
   {
+    "id": "2026-05-24-总管AIJamie-28bb56e65f",
+    "agent": "总管AIJamie",
+    "date": "2026-05-24",
+    "title": "总管AIJamie · AI供应链瓶颈层公司核查 任务分发",
+    "summary": "总管AIJamie · AI供应链瓶颈层公司核查 任务分发",
+    "bullets": [
+      "L0 原材料：AXTI（InP基板6070%垄断说法）、Soitec（SOI基板CPO垄断说法）",
+      "L1 激光源：AAOI（AI光收发器）",
+      "L2 光互联：COHR（英伟达战略入股）、MRVL（AWS定制芯片）",
+      "L4 系统终点：NVDA"
+    ],
+    "raw": "# 总管AIJamie · AI供应链瓶颈层公司核查 任务分发\n\n## 对话提炼\nJames 分享了 X 上投资人 Serenity（@aleabitoreddit）的\"供应链瓶颈狩猎\"方法论，文章核心观点：\n\n1. 不买 NVDA/AAPL 等所有人都知道的股票\n2. 专找\"卡住整条 AI 产业链但无人知晓\"的小公司\n3. 在机构发现前 2-3 个季度提前建仓\n\n文章划分了 AI 供应链层级：\n- L0 原材料：AXTI（InP基板60-70%垄断说法）、Soitec（SOI基板CPO垄断说法）\n- L1 激光源：AAOI（AI光收发器）\n- L2 光互联：COHR（英伟达战略入股）、MRVL（AWS定制芯片）\n- L4 系统终点：NVDA\n\nAIJamie 对方法论评价：\n- 方向对：上游瓶颈、AI行情外溢、机构覆盖滞后，这几点是对的\n- 表达偏激进：很多\"垄断份额\"数字经不起核查，逻辑先信但数字要验\n\nAIJamie 升级版框架：瓶颈 × 利润池 × 时间差，三者同时成立才有超额收益。\n\n核查要求：\n- 优先使用公司官方 IR / 官方财报口径\n- 所有关键数字标注信源可信度（A-2/B-3/D-4）\n- 明确区分已确认事实与判断与待验证假设\n- 给出进入 watchlist / 继续观察 / 不碰 的明确建议\n\n## 任务分配\n- 美股大师：AXTI, AAOI, COHR, MRVL, Soitec\n\n## 共用研究问题\n1. 这家公司卡在 AI 产业链哪一层（L0材料/L1激光源/L2光互联/L3算力/L4系统）？\n2. 它是'没它不行'的真瓶颈，还是'重要但可替代'的一般环节？请评估技术替代难度、客户切换成本、供给扩张难度。\n3. 它有没有把瓶颈转成利润？请看毛利率、经营杠杆、自由现金流、ROIC，以及是否有被大客户持续压价的风险。\n4. 当前市场是否已把它定价为 AI 核心受益股？还是仍在冷门/半热区间？\n5. 综合判断：加入 watchlist / 继续观察 / 高预期不追 / 逻辑成立但不够赚钱 / 先不碰。给出理由。",
+    "source": "jamie-chief/2026-05-24-aijamie-dispatch-ai供应链瓶颈层公司核查-e496a620bd.md",
+    "origin": "inbox"
+  },
+  {
     "id": "2026-05-24-总管AIJamie-eef3188a62",
     "agent": "总管AIJamie",
     "date": "2026-05-24",

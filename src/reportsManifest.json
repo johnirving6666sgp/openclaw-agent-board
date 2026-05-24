@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-24T18:17:34.460Z",
+  "generatedAt": "2026-05-24T20:41:30.369Z",
   "sourceMode": "hybrid",
   "sourceRoot": "/Users/aijamie4bc/Documents/AIJamie/agent-inbox",
   "reportsDir": "/Users/aijamie4bc/Documents/AIJamie/agents/reports",
@@ -436,6 +436,13 @@
       "fileName": "hk-stock-master/workspace-hkstock-2026-05-24.md",
       "bytes": 1345,
       "modifiedAt": "2026-05-24T17:02:43.021Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "jamie-chief/2026-05-24-aijamie-dispatch-ai供应链瓶颈层公司核查-e496a620bd.md",
+      "bytes": 2114,
+      "modifiedAt": "2026-05-24T20:41:29.369Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -1071,15 +1078,15 @@
     }
   ],
   "warnings": [],
-  "inboxFiles": 114,
+  "inboxFiles": 115,
   "vaultFiles": 32,
-  "totalReports": 206,
+  "totalReports": 207,
   "agentCounts": {
     "企业AI大师": 15,
     "港股大师": 60,
     "日股大师": 13,
     "美股大师": 77,
     "A股大师": 39,
-    "总管AIJamie": 2
+    "总管AIJamie": 3
   }
 }
