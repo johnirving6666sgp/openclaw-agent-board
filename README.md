@@ -81,6 +81,20 @@ A股大师     -> a-stock-master
 ~/.openclaw/workspace/scripts/append_report.py
 ```
 
+另外，部分大师有自己的独立 workspace。当前已接入：
+
+```text
+美股大师：~/.openclaw/workspace-usstock/reports/*.md
+```
+
+这些外部 reports 会在同步时自动导入到：
+
+```text
+/Users/aijamie4bc/Documents/AIJamie/agent-inbox/us-stock-master/
+```
+
+因此即使美股大师仍直接写 `workspace-usstock/reports/YYYY-MM-DD.md`，小看板也会读取到完整原文。
+
 当前版本生成了一个前端数据快照：`src/reportsData.js`。如果报告更新，运行：
 
 ```bash

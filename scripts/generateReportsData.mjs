@@ -31,6 +31,14 @@ const agentFolderMap = {
   jamie: '总管AIJamie',
   'jamie-chief': '总管AIJamie'
 };
+const externalReportSources = [
+  {
+    name: 'workspace-usstock',
+    agent: '美股大师',
+    sourceDir: '/Users/aijamie4bc/.openclaw/workspace-usstock/reports',
+    inboxFolder: 'us-stock-master'
+  }
+];
 
 function detectAgentFromHeading(title) {
   if (/企业AI大师|企业AI|企业 AI|企业级AI|企业级 AI|兆精summit|兆精/.test(title)) return '企业AI大师';
@@ -98,6 +106,10 @@ function cleanTitle(title) {
   return stripMarkdown(title.replace(/^#{1,2}\s+/, '')).slice(0, 80);
 }
 
+function yamlQuote(value) {
+  return `"${String(value).replaceAll('\\', '\\\\').replaceAll('"', '\\"')}"`;
+}
+
 function parseFrontmatter(content) {
   if (!content.startsWith('---\n')) return { data: {}, body: content };
   const end = content.indexOf('\n---', 4);
@@ -129,6 +141,10 @@ function dateFromInbox({ frontmatter, fileName }) {
 function titleFromInbox({ frontmatter, body, date }) {
   if (frontmatter.title) return frontmatter.title;
   return body.match(/^#{1,2}\s+(.+)$/m)?.[1]?.trim() || `${date} 报告`;
+}
+
+function firstHeading(content) {
+  return content.match(/^#{1,2}\s+(.+)$/m)?.[1]?.trim() || '';
 }
 
 function splitSections(content, date) {
@@ -182,6 +198,49 @@ async function readMarkdownFiles(root, ignoreDirs = new Set()) {
 
   await walk(root);
   return files.sort();
+}
+
+async function writeIfChanged(filePath, content) {
+  try {
+    if ((await fs.readFile(filePath, 'utf8')) === content) return false;
+  } catch {
+    // Missing file should be written.
+  }
+  await fs.mkdir(path.dirname(filePath), { recursive: true });
+  await fs.writeFile(filePath, content);
+  return true;
+}
+
+async function importExternalReportsToInbox() {
+  const imported = [];
+  for (const source of externalReportSources) {
+    const files = await readMarkdownFiles(source.sourceDir);
+    for (const filePath of files) {
+      const content = (await fs.readFile(filePath, 'utf8')).trim();
+      if (content.length <= 40) continue;
+
+      const date = path.basename(filePath, '.md').match(/\d{4}-\d{2}-\d{2}/)?.[0];
+      if (!date) continue;
+
+      const title = `${source.agent} · ${firstHeading(content) || `${date} 报告`}`;
+      const body = [
+        '---',
+        `agent: ${yamlQuote(source.agent)}`,
+        `date: ${date}`,
+        `title: ${yamlQuote(title)}`,
+        `createdAt: ${(await fs.stat(filePath)).mtime.toISOString()}`,
+        `source: ${yamlQuote(`${source.name}/reports/${path.basename(filePath)}`)}`,
+        '---',
+        '',
+        content,
+        ''
+      ].join('\n');
+      const inboxPath = path.join(inboxDir, source.inboxFolder, `${source.name}-${date}.md`);
+      const changed = await writeIfChanged(inboxPath, body);
+      imported.push({ changed, inboxPath, source: filePath });
+    }
+  }
+  return imported;
 }
 
 function makeReport({ agent, date, raw, source, title, origin }) {
@@ -301,12 +360,23 @@ async function exportInboxToVault(reports) {
 async function main() {
   await fs.mkdir(inboxDir, { recursive: true });
   await Promise.all(inboxAgentFolders.map((folder) => fs.mkdir(path.join(inboxDir, folder), { recursive: true })));
+  const importedExternalReports = await importExternalReportsToInbox();
 
   const inboxFiles = await readMarkdownFiles(inboxDir);
   const vaultFiles = await readMarkdownFiles(reportsDir, new Set(['_inbox']));
   const sourceMode = inboxFiles.length ? 'hybrid' : 'vault';
   const sourceRoot = sourceMode === 'hybrid' ? inboxDir : reportsDir;
-  const manifest = { generatedAt: '', sourceMode, sourceRoot, reportsDir, inboxDir, sourceFiles: [], warnings: [] };
+  const manifest = {
+    generatedAt: '',
+    sourceMode,
+    sourceRoot,
+    reportsDir,
+    inboxDir,
+    externalReportSources,
+    importedExternalReports: importedExternalReports.length,
+    sourceFiles: [],
+    warnings: []
+  };
   const inboxManifest = { sourceFiles: [], warnings: [] };
   const vaultManifest = { sourceFiles: [], warnings: [] };
   const inboxCollected = await collectInboxReports(inboxFiles, inboxManifest);
@@ -341,6 +411,7 @@ async function main() {
 
   console.log(`Synced ${reports.length} report sections (${sourceMode})`);
   console.log(`Inbox files: ${manifest.inboxFiles}; Vault files: ${manifest.vaultFiles}`);
+  if (importedExternalReports.length) console.log(`Imported external reports to Inbox: ${importedExternalReports.length}`);
   if (inboxCollected.reports.length) console.log(`Exported Obsidian reading copies to ${inboxVaultOutDir}`);
   for (const agent of agents) console.log(`${agent}: ${manifest.agentCounts[agent]}`);
   if (manifest.warnings.length) {
