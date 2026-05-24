@@ -9,6 +9,19 @@ export const reportAgents = [
 
 export const agentReports = [
   {
+    "id": "2026-05-23-企业AI大师-cc331ead53",
+    "agent": "企业AI大师",
+    "date": "2026-05-23",
+    "title": "企业AI大师 · 兆精summit 日报",
+    "summary": "企业AI大师 · 兆精summit 日报",
+    "bullets": [
+      "企业AI大师 · 兆精summit 日报"
+    ],
+    "raw": "## 企业AI大师 · 兆精summit 日报\n_生成时间：23:56_\n\n今日无需要沉淀的有效讨论。",
+    "source": "enterprise-ai-master/2026-05-23-b4b10e1d56.md",
+    "origin": "inbox"
+  },
+  {
     "id": "2026-05-23-日股大师-ffefd963c3",
     "agent": "日股大师",
     "date": "2026-05-23",
