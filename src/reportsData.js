@@ -9,6 +9,22 @@ export const reportAgents = [
 
 export const agentReports = [
   {
+    "id": "2026-05-24-美股大师-e54fec7455",
+    "agent": "美股大师",
+    "date": "2026-05-24",
+    "title": "美股大师 · 美股日报 20260524",
+    "summary": "目标：优先找 AI 基础设施确定性赛道，其次是 Token 时代分发入口/平台型公司",
+    "bullets": [
+      "任务类型：王者归来观察池日更 + 每日新公司筛选",
+      "目标：优先找 AI 基础设施确定性赛道，其次是 Token 时代分发入口/平台型公司",
+      "读取框架：",
+      "wangzheguilaiwatchlist.md"
+    ],
+    "raw": "# 美股日报 - 2026-05-24\n\n## Plan\n- 任务类型：王者归来观察池日更 + 每日新公司筛选\n- 目标：优先找 AI 基础设施确定性赛道，其次是 Token 时代分发入口/平台型公司\n\n## Gather\n- 读取框架：\n  - `wang-zhe-gui-lai-watchlist.md`\n  - `token-era-great-companies.md`\n  - `great-company-framework.md`\n  - `token-era-small-mid-watchlist.md`\n  - `vault/wiki/ai-infrastructure-investment-thesis.md`\n- 近 48 小时跟踪：MQ / UPST / BILL / S / PATH / SOFI / U 官方 IR 与新闻摘要\n- 候选新公司：Micron (MU)\n\n## Draft\n### 今日筛选公司：Micron (MU)\n- 赛道：AI 存储 / HBM\n- 逻辑：AI 训练与推理都在吞噬高带宽内存，Micron 是少数具备产能、技术与客户绑定能力的核心受益者。它属于“无论谁赢模型战争，内存层都会被需要”的确定性资产。\n- 官方依据：Micron FY2026 Q2 官方口径提到 revenue、gross margin、EPS、free cash flow 均创纪录，adjusted free cash flow 为 **$6.9B**；管理层明确表示 AI 时代 memory 已成为客户的战略资产。`[A-2]`\n- 结论：比纯软件 AI 概念更确定，但因行业周期属性，估值波动仍会更大。\n\n### 王者归来更新\n- MQ：维持 84\n- UPST：维持 80\n- BILL：维持 78\n- S：70→71\n- PATH：68→69\n- SOFI：维持 66\n- U：维持 61\n\n## Red Team\n- MU 的风险在于：存储本质上仍是周期行业，若供给释放过快，景气上行可能提前结束。\n- S / PATH 的上调仅因为验证窗口更近，不代表基本面已经被证实加速。\n- MQ / BILL / UPST 虽然更像王者归来，但后续仍要防止市场提前交易“修复完成”。\n\n## Final\n- 今日最值得新增跟踪的是 **Micron (MU)**，因为它符合 James 新增的“AI 基础设施确定性”最高优先级，且硬件需求受益路径清晰。\n- 王者归来池今天不大改，保持纪律比强行调分更重要。",
+    "source": "us-stock-master/workspace-usstock-2026-05-24.md",
+    "origin": "inbox"
+  },
+  {
     "id": "2026-05-23-企业AI大师-cc331ead53",
     "agent": "企业AI大师",
     "date": "2026-05-23",
