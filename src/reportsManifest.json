@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T04:57:06.926Z",
+  "generatedAt": "2026-05-26T04:59:19.961Z",
   "sourceMode": "hybrid",
   "sourceRoot": "/Users/aijamie4bc/Documents/AIJamie/agent-inbox",
   "reportsDir": "/Users/aijamie4bc/Documents/AIJamie/agents/reports",
@@ -50,49 +50,49 @@
     {
       "fileName": "a-stock-master/2026-05-25-8fa91b981b.md",
       "bytes": 5246,
-      "modifiedAt": "2026-05-25T00:02:51.890Z",
+      "modifiedAt": "2026-05-25T00:02:51.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "a-stock-master/2026-05-25-900085c738.md",
       "bytes": 6287,
-      "modifiedAt": "2026-05-25T02:32:17.228Z",
+      "modifiedAt": "2026-05-25T02:32:17.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "a-stock-master/2026-05-25-bbda0dd888.md",
       "bytes": 6065,
-      "modifiedAt": "2026-05-25T02:02:06.631Z",
+      "modifiedAt": "2026-05-25T02:02:06.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "a-stock-master/2026-05-25-c92a9eca06.md",
       "bytes": 8273,
-      "modifiedAt": "2026-05-25T09:03:08.501Z",
+      "modifiedAt": "2026-05-25T09:03:08.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "a-stock-master/2026-05-26-8f278f6d1f.md",
       "bytes": 5356,
-      "modifiedAt": "2026-05-26T00:02:13.787Z",
+      "modifiedAt": "2026-05-26T00:02:13.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "a-stock-master/2026-05-26-a1484f61f3.md",
       "bytes": 5631,
-      "modifiedAt": "2026-05-26T02:31:32.763Z",
+      "modifiedAt": "2026-05-26T02:31:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "a-stock-master/2026-05-26-fa8085690f.md",
       "bytes": 5777,
-      "modifiedAt": "2026-05-26T02:02:32.872Z",
+      "modifiedAt": "2026-05-26T02:02:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -204,14 +204,14 @@
     {
       "fileName": "hk-stock-master/2026-05-25-2f4f1481d0.md",
       "bytes": 5024,
-      "modifiedAt": "2026-05-25T17:03:05.016Z",
+      "modifiedAt": "2026-05-25T17:03:05.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "hk-stock-master/2026-05-25-f59928a493.md",
       "bytes": 2393,
-      "modifiedAt": "2026-05-26T01:01:38.999Z",
+      "modifiedAt": "2026-05-26T01:01:38.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -239,7 +239,7 @@
     {
       "fileName": "hk-stock-master/workspace-hkstock-2026-04-08.md",
       "bytes": 1677,
-      "modifiedAt": "2026-05-24T01:28:12.998Z",
+      "modifiedAt": "2026-05-24T01:28:12.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -253,7 +253,7 @@
     {
       "fileName": "hk-stock-master/workspace-hkstock-2026-04-10.md",
       "bytes": 2247,
-      "modifiedAt": "2026-05-24T01:28:12.999Z",
+      "modifiedAt": "2026-05-24T01:28:12.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -302,7 +302,7 @@
     {
       "fileName": "hk-stock-master/workspace-hkstock-2026-04-17.md",
       "bytes": 6165,
-      "modifiedAt": "2026-05-24T01:28:13.001Z",
+      "modifiedAt": "2026-05-24T01:28:13.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -316,7 +316,7 @@
     {
       "fileName": "hk-stock-master/workspace-hkstock-2026-04-20.md",
       "bytes": 1964,
-      "modifiedAt": "2026-05-24T01:28:13.001Z",
+      "modifiedAt": "2026-05-24T01:28:13.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -330,7 +330,7 @@
     {
       "fileName": "hk-stock-master/workspace-hkstock-2026-04-22.md",
       "bytes": 2169,
-      "modifiedAt": "2026-05-24T01:28:13.002Z",
+      "modifiedAt": "2026-05-24T01:28:13.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -344,7 +344,7 @@
     {
       "fileName": "hk-stock-master/workspace-hkstock-2026-04-24.md",
       "bytes": 5192,
-      "modifiedAt": "2026-05-24T01:28:13.002Z",
+      "modifiedAt": "2026-05-24T01:28:13.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -365,7 +365,7 @@
     {
       "fileName": "hk-stock-master/workspace-hkstock-2026-04-28.md",
       "bytes": 2105,
-      "modifiedAt": "2026-05-24T01:28:13.003Z",
+      "modifiedAt": "2026-05-24T01:28:13.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -386,7 +386,7 @@
     {
       "fileName": "hk-stock-master/workspace-hkstock-2026-05-01.md",
       "bytes": 3778,
-      "modifiedAt": "2026-05-24T01:28:13.005Z",
+      "modifiedAt": "2026-05-24T01:28:13.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -400,7 +400,7 @@
     {
       "fileName": "hk-stock-master/workspace-hkstock-2026-05-06.md",
       "bytes": 1929,
-      "modifiedAt": "2026-05-24T01:28:13.005Z",
+      "modifiedAt": "2026-05-24T01:28:13.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -442,21 +442,21 @@
     {
       "fileName": "hk-stock-master/workspace-hkstock-2026-05-12.md",
       "bytes": 2419,
-      "modifiedAt": "2026-05-24T01:28:13.007Z",
+      "modifiedAt": "2026-05-24T01:28:13.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "hk-stock-master/workspace-hkstock-2026-05-13.md",
       "bytes": 2068,
-      "modifiedAt": "2026-05-24T01:28:13.007Z",
+      "modifiedAt": "2026-05-24T01:28:13.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "hk-stock-master/workspace-hkstock-2026-05-14.md",
       "bytes": 2424,
-      "modifiedAt": "2026-05-24T01:28:13.007Z",
+      "modifiedAt": "2026-05-24T01:28:13.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -491,14 +491,14 @@
     {
       "fileName": "hk-stock-master/workspace-hkstock-2026-05-21.md",
       "bytes": 1842,
-      "modifiedAt": "2026-05-24T01:28:13.009Z",
+      "modifiedAt": "2026-05-24T01:28:13.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "hk-stock-master/workspace-hkstock-2026-05-23.md",
       "bytes": 1865,
-      "modifiedAt": "2026-05-24T01:28:13.010Z",
+      "modifiedAt": "2026-05-24T01:28:13.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -512,7 +512,7 @@
     {
       "fileName": "jamie-chief/2026-05-24-aijamie-dispatch-ai供应链瓶颈层公司核查-e496a620bd.md",
       "bytes": 2114,
-      "modifiedAt": "2026-05-24T20:41:29.369Z",
+      "modifiedAt": "2026-05-24T20:41:29.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -533,21 +533,21 @@
     {
       "fileName": "jamie-chief/workflow-supervisor-2026-05-25.md",
       "bytes": 1618,
-      "modifiedAt": "2026-05-25T16:00:35.838Z",
+      "modifiedAt": "2026-05-25T16:00:35.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "jp-stock-master/2026-05-24-b78b721b3c.md",
       "bytes": 5153,
-      "modifiedAt": "2026-05-25T00:07:30.725Z",
+      "modifiedAt": "2026-05-25T00:07:30.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "jp-stock-master/2026-05-25-4d6beaea00.md",
       "bytes": 4979,
-      "modifiedAt": "2026-05-26T00:04:19.628Z",
+      "modifiedAt": "2026-05-26T00:04:19.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -589,238 +589,238 @@
     {
       "fileName": "us-stock-master/2026-05-25-18777aea24.md",
       "bytes": 8405,
-      "modifiedAt": "2026-05-25T13:02:30.956Z",
+      "modifiedAt": "2026-05-25T13:02:30.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/2026-05-25-ad86be50f8.md",
       "bytes": 9136,
-      "modifiedAt": "2026-05-25T22:01:37.043Z",
+      "modifiedAt": "2026-05-25T22:01:37.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-03-23.md",
       "bytes": 2366,
-      "modifiedAt": "2026-05-24T01:22:32.380Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-03-24.md",
       "bytes": 2228,
-      "modifiedAt": "2026-05-24T01:22:32.380Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-03-25.md",
       "bytes": 3334,
-      "modifiedAt": "2026-05-24T01:22:32.381Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-03-26.md",
       "bytes": 3257,
-      "modifiedAt": "2026-05-24T01:22:32.382Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-03-27.md",
       "bytes": 4243,
-      "modifiedAt": "2026-05-24T01:22:32.383Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-03-28.md",
       "bytes": 1675,
-      "modifiedAt": "2026-05-24T01:22:32.383Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-03-30.md",
       "bytes": 3338,
-      "modifiedAt": "2026-05-24T01:22:32.384Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-03-31.md",
       "bytes": 4080,
-      "modifiedAt": "2026-05-24T01:22:32.384Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-01.md",
       "bytes": 4496,
-      "modifiedAt": "2026-05-24T01:22:32.385Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-02.md",
       "bytes": 6593,
-      "modifiedAt": "2026-05-24T01:22:32.386Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-03.md",
       "bytes": 7672,
-      "modifiedAt": "2026-05-24T01:22:32.386Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-04.md",
       "bytes": 8759,
-      "modifiedAt": "2026-05-24T01:22:32.386Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-05.md",
       "bytes": 8338,
-      "modifiedAt": "2026-05-24T01:22:32.387Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-06.md",
       "bytes": 3472,
-      "modifiedAt": "2026-05-24T01:22:32.388Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-07.md",
       "bytes": 8838,
-      "modifiedAt": "2026-05-24T01:22:32.388Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-08.md",
       "bytes": 3930,
-      "modifiedAt": "2026-05-24T01:22:32.389Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-09.md",
       "bytes": 10419,
-      "modifiedAt": "2026-05-24T01:22:32.389Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-10.md",
       "bytes": 8288,
-      "modifiedAt": "2026-05-24T01:22:32.390Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-11.md",
       "bytes": 11008,
-      "modifiedAt": "2026-05-24T01:22:32.391Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-12.md",
       "bytes": 7662,
-      "modifiedAt": "2026-05-24T01:22:32.391Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-13.md",
       "bytes": 9810,
-      "modifiedAt": "2026-05-24T01:22:32.392Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-14.md",
       "bytes": 10381,
-      "modifiedAt": "2026-05-24T01:22:32.392Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-15.md",
       "bytes": 12240,
-      "modifiedAt": "2026-05-24T01:22:32.392Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-16.md",
       "bytes": 7844,
-      "modifiedAt": "2026-05-24T01:22:32.393Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-17.md",
       "bytes": 7366,
-      "modifiedAt": "2026-05-24T01:22:32.393Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-18.md",
       "bytes": 3008,
-      "modifiedAt": "2026-05-24T01:22:32.394Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-19.md",
       "bytes": 7279,
-      "modifiedAt": "2026-05-24T01:22:32.394Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-20.md",
       "bytes": 9394,
-      "modifiedAt": "2026-05-24T01:22:32.395Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-23.md",
       "bytes": 6185,
-      "modifiedAt": "2026-05-24T01:22:32.395Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-24.md",
       "bytes": 10851,
-      "modifiedAt": "2026-05-24T01:22:32.395Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-26.md",
       "bytes": 10503,
-      "modifiedAt": "2026-05-24T01:22:32.396Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-27.md",
       "bytes": 9059,
-      "modifiedAt": "2026-05-24T01:22:32.397Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -834,56 +834,56 @@
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-29.md",
       "bytes": 7852,
-      "modifiedAt": "2026-05-24T01:22:32.399Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-04-30.md",
       "bytes": 6101,
-      "modifiedAt": "2026-05-24T01:22:32.399Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-05.md",
       "bytes": 6129,
-      "modifiedAt": "2026-05-24T01:22:32.400Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-06.md",
       "bytes": 8800,
-      "modifiedAt": "2026-05-24T01:22:32.400Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-07.md",
       "bytes": 8766,
-      "modifiedAt": "2026-05-24T01:22:32.401Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-08.md",
       "bytes": 10279,
-      "modifiedAt": "2026-05-24T01:22:32.401Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-10.md",
       "bytes": 8434,
-      "modifiedAt": "2026-05-24T01:22:32.401Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-11.md",
       "bytes": 8497,
-      "modifiedAt": "2026-05-24T01:22:32.402Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -897,14 +897,14 @@
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-13.md",
       "bytes": 6583,
-      "modifiedAt": "2026-05-24T01:22:32.403Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-14.md",
       "bytes": 8989,
-      "modifiedAt": "2026-05-24T01:22:32.403Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -918,49 +918,49 @@
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-17.md",
       "bytes": 3472,
-      "modifiedAt": "2026-05-24T01:22:32.404Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-18.md",
       "bytes": 7833,
-      "modifiedAt": "2026-05-24T01:22:32.405Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-20.md",
       "bytes": 12648,
-      "modifiedAt": "2026-05-24T01:22:32.407Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-21.md",
       "bytes": 1677,
-      "modifiedAt": "2026-05-24T01:22:32.407Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-23.md",
       "bytes": 4489,
-      "modifiedAt": "2026-05-24T01:22:32.408Z",
+      "modifiedAt": "2026-05-24T01:22:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-24.md",
       "bytes": 12452,
-      "modifiedAt": "2026-05-26T04:57:05.927Z",
+      "modifiedAt": "2026-05-26T04:59:18.961Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-25.md",
       "bytes": 8369,
-      "modifiedAt": "2026-05-25T13:04:04.032Z",
+      "modifiedAt": "2026-05-25T13:04:04.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
