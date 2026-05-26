@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T02:29:37.755Z",
+  "generatedAt": "2026-05-26T02:31:54.618Z",
   "sourceMode": "hybrid",
   "sourceRoot": "/Users/aijamie4bc/Documents/AIJamie/agent-inbox",
   "reportsDir": "/Users/aijamie4bc/Documents/AIJamie/agents/reports",
@@ -79,6 +79,13 @@
       "fileName": "a-stock-master/2026-05-26-8f278f6d1f.md",
       "bytes": 5356,
       "modifiedAt": "2026-05-26T00:02:13.787Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "a-stock-master/2026-05-26-a1484f61f3.md",
+      "bytes": 5631,
+      "modifiedAt": "2026-05-26T02:31:32.763Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -946,7 +953,7 @@
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-24.md",
       "bytes": 12452,
-      "modifiedAt": "2026-05-26T02:29:36.755Z",
+      "modifiedAt": "2026-05-26T02:31:53.618Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -1197,22 +1204,22 @@
     },
     {
       "fileName": "2026-05-26.md",
-      "bytes": 13147,
-      "modifiedAt": "2026-05-26T02:02:32.873Z",
-      "sections": 3,
+      "bytes": 18622,
+      "modifiedAt": "2026-05-26T02:31:32.763Z",
+      "sections": 4,
       "sourceType": "vault"
     }
   ],
   "warnings": [],
-  "inboxFiles": 130,
+  "inboxFiles": 131,
   "vaultFiles": 35,
-  "totalReports": 223,
+  "totalReports": 224,
   "agentCounts": {
     "企业AI大师": 16,
     "港股大师": 63,
     "日股大师": 15,
     "美股大师": 80,
-    "A股大师": 45,
+    "A股大师": 46,
     "总管AIJamie": 4
   }
 }
