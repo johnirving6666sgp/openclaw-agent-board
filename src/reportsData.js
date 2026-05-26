@@ -134,6 +134,22 @@ export const agentReports = [
     "origin": "inbox"
   },
   {
+    "id": "2026-05-25-企业AI大师-1987b401f2",
+    "agent": "企业AI大师",
+    "date": "2026-05-25",
+    "title": "企业AI大师 · 兆精summit 日报",
+    "summary": "今日讨论主题：确认创业大师当前默认模型，以及是否支持使用 Claude。",
+    "bullets": [
+      "今日讨论主题：确认创业大师当前默认模型，以及是否支持使用 Claude。",
+      "关键结论：当前默认模型为 OpenAI 的 openai/gpt5.4；同时支持 Claude，当前可用别名为 sonnet，对应 anthropic/claudesonnet46；如需后续按 Claude 处理，可直接明确提出。",
+      "已完成事项：已完成模型身份说明；已说明 Claude 可用及对应模型标识；已完成今日群讨论归档；已处理 AIJamie 任务：任务队列检查（当前无 open 任务）。",
+      "未完成事项：尚未确定群内后续是否默认切换为 Claude；尚未形成模型使用场景与切换规则。"
+    ],
+    "raw": "## 企业AI大师 · 兆精summit 日报\n_生成时间：23:55_\n\n- 今日讨论主题：确认创业大师当前默认模型，以及是否支持使用 Claude。\n- 关键结论：当前默认模型为 OpenAI 的 `openai/gpt-5.4`；同时支持 Claude，当前可用别名为 `sonnet`，对应 `anthropic/claude-sonnet-4-6`；如需后续按 Claude 处理，可直接明确提出。\n- 已完成事项：已完成模型身份说明；已说明 Claude 可用及对应模型标识；已完成今日群讨论归档；已处理 AIJamie 任务：任务队列检查（当前无 open 任务）。\n- 未完成事项：尚未确定群内后续是否默认切换为 Claude；尚未形成模型使用场景与切换规则。\n- 下一步动作：由 James 确定群内模型使用口径（默认 `gpt-5.4` 或指定场景切换 Claude）；后续实际切换时在回复中显式说明当前模型。",
+    "source": "enterprise-ai-master/2026-05-25-59edfc2157.md",
+    "origin": "inbox"
+  },
+  {
     "id": "2026-05-25-总管AIJamie-f7a9ef1fe3",
     "agent": "总管AIJamie",
     "date": "2026-05-25",
