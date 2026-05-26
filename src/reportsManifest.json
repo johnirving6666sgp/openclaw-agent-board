@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T21:01:25.678Z",
+  "generatedAt": "2026-05-26T21:03:36.956Z",
   "sourceMode": "hybrid",
   "sourceRoot": "/Users/aijamie4bc/Documents/AIJamie/agent-inbox",
   "reportsDir": "/Users/aijamie4bc/Documents/AIJamie/agents/reports",
@@ -45,7 +45,7 @@
       "title": "总管AIJamie · 工作流监督报告"
     }
   ],
-  "importedExternalReports": 114,
+  "importedExternalReports": 115,
   "sourceFiles": [
     {
       "fileName": "a-stock-master/2026-05-25-8fa91b981b.md",
@@ -988,7 +988,7 @@
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-24.md",
       "bytes": 12452,
-      "modifiedAt": "2026-05-26T21:01:24.679Z",
+      "modifiedAt": "2026-05-26T21:03:35.956Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -996,6 +996,13 @@
       "fileName": "us-stock-master/workspace-usstock-2026-05-25.md",
       "bytes": 8369,
       "modifiedAt": "2026-05-25T13:04:04.000Z",
+      "sections": 1,
+      "sourceType": "inbox"
+    },
+    {
+      "fileName": "us-stock-master/workspace-usstock-2026-05-26.md",
+      "bytes": 11376,
+      "modifiedAt": "2026-05-26T21:03:35.957Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -1246,14 +1253,14 @@
     }
   ],
   "warnings": [],
-  "inboxFiles": 136,
+  "inboxFiles": 137,
   "vaultFiles": 35,
-  "totalReports": 229,
+  "totalReports": 230,
   "agentCounts": {
     "企业AI大师": 17,
     "港股大师": 64,
     "日股大师": 15,
-    "美股大师": 81,
+    "美股大师": 82,
     "A股大师": 47,
     "总管AIJamie": 5
   }
