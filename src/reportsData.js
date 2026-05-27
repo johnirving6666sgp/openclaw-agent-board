@@ -164,6 +164,22 @@ export const agentReports = [
     "origin": "inbox"
   },
   {
+    "id": "2026-05-26-港股大师-2db2a50f3a",
+    "agent": "港股大师",
+    "date": "2026-05-26",
+    "title": "港股大师 · 港股观察清单日更",
+    "summary": "已检查 /Users/aijamie4bc/Documents/AIJamie/agenttasks/hkstockmaster/",
+    "bullets": [
+      "已检查 /Users/aijamie4bc/Documents/AIJamie/agenttasks/hkstockmaster/",
+      "当前目录为空，未发现 status=open 的 Markdown 任务",
+      "因此本次无新增 AIJamie 指派公司/研究问题需要并入",
+      "今日继续按“华领模式观察清单”做 48 小时例行贝叶斯更新，重点看：腾盛博药的 HBV IIb 临床窗口、华领医药的商业化/学术催化、华兴资本的治理修复与资产重估线索。"
+    ],
+    "raw": "## 港股大师 · 港股观察清单日更\n_生成时间：18:01_\n\n🐉 港股观察清单日更 · 2026-05-27\n\nAIJamie 任务队列检查：\n- 已检查 `/Users/aijamie4bc/Documents/AIJamie/agent-tasks/hk-stock-master/`\n- 当前目录为空，未发现 status=open 的 Markdown 任务\n- 因此本次无新增 AIJamie 指派公司/研究问题需要并入\n\nPlan\n- 今日继续按“华领模式观察清单”做 48 小时例行贝叶斯更新，重点看：腾盛博药的 HBV IIb 临床窗口、华领医药的商业化/学术催化、华兴资本的治理修复与资产重估线索。\n\nGather\n- 已先读：`watchlists/hualing-model-watchlist.md`、`MEMORY.md`\n- 逐家公司执行近48小时公开搜索，并复查官网/交易所公开入口：\n  - 腾盛博药-B（2137）：Brave 搜索 + Brii Bio 投资者关系入口\n  - 华领医药-B（2552）：Brave 搜索 + Hua Medicine 新闻页\n  - 华兴资本控股（1911）：Brave 搜索 + China Renaissance 官网公开入口\n\nDraft / 贝叶斯更新\n📈 评分变动\n• 腾盛博药-B ｜ 评分维持60 ｜ 48小时内未见新的 ENRICH/ENHANCE IIb 主读数、监管节点、融资安排或管理层扰动 ｜ [来源: Brii Bio 投资者关系入口/公开搜索结果, 可信度: A-2]\n• 华领医药-B ｜ 评分维持77 ｜ 48小时内未见新增销售放量、第二代GKA读数、固定复方、海外BD或医保落地硬数据；窗口内高相关信息仍为 2026-05-20 ADA 会议预告 ｜ [来源: Hua Medicine 官网 news 页面/公开搜索结果, 可信度: A-2]\n• 华兴资本控股 ｜ 评分维持65 ｜ 48小时内未见新的治理修复、监管进展、资产处置、资本运作或业务恢复级别增量信息 ｜ [来源: China Renaissance 官网公开入口/公开搜索结果, 可信度: A-2]\n\n📊 财务更新\n• 今日无新增已核验财务更新；现金、受限资金、runway 等仍沿用上一轮已确认口径，不因二手摘要重复调分\n\n❗ 未验证信息\n• 当前运行环境未提供可调用的 `source-verifier` skill，因此无法按既定流程对新出现的数字/临床声明做 NATO 级别信源核验。\n• 本次公开结果中也未出现足以单独驱动调分的新增硬数字或关键临床声明；因此仅采用公司官网/港交所等一手公开来源做保守筛查，不基于未核验二手信息调整评分。\n\nRed Team\n- 腾盛博药：市场仍在等待真正的 IIb 主读数，当前最大风险是“长时间无数据 → 期权价值递延”；没有新披露不等于风险消失。\n- 华领医药：商业化反转逻辑仍成立，但若后续缺少销量、医保、固定复方或海外拓展的实证，市场可能继续只给保守估值。\n- 华兴资本：低 PB 逻辑本质上仍受治理折价压制；若没有治理修复、资产兑现或业务恢复硬证据，折价可能长期存在。\n\nFinal\n- 今日三家公司均无足以改变先验的新信息，维持原评分：腾盛60、华领77、华兴65。\n- 已更新文件：`watchlists/hualing-model-watchlist.md`\n- 已处理 AIJamie 任务：任务队列检查（目录为空，无 open 任务）",
+    "source": "hk-stock-master/2026-05-26-89f29b10bb.md",
+    "origin": "inbox"
+  },
+  {
     "id": "2026-05-26-美股大师-7d0724e495",
     "agent": "美股大师",
     "date": "2026-05-26",
