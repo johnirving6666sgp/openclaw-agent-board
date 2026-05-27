@@ -136,6 +136,19 @@ export const agentReports = [
     "origin": "inbox"
   },
   {
+    "id": "2026-05-26-企业AI大师-3b049f7eba",
+    "agent": "企业AI大师",
+    "date": "2026-05-26",
+    "title": "企业AI大师 · 兆精summit 日报",
+    "summary": "企业AI大师 · 兆精summit 日报",
+    "bullets": [
+      "企业AI大师 · 兆精summit 日报"
+    ],
+    "raw": "## 企业AI大师 · 兆精summit 日报\n_生成时间：23:56_\n\n今日无需要沉淀的有效讨论。",
+    "source": "enterprise-ai-master/2026-05-26-ab33d51cf3.md",
+    "origin": "inbox"
+  },
+  {
     "id": "2026-05-26-总管AIJamie-1e7e749053",
     "agent": "总管AIJamie",
     "date": "2026-05-26",
