@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T16:01:07.803Z",
+  "generatedAt": "2026-05-27T16:03:20.351Z",
   "sourceMode": "hybrid",
   "sourceRoot": "/Users/aijamie4bc/Documents/AIJamie/agent-inbox",
   "reportsDir": "/Users/aijamie4bc/Documents/AIJamie/agents/reports",
@@ -610,7 +610,7 @@
     {
       "fileName": "jamie-chief/workflow-supervisor-2026-05-27.md",
       "bytes": 1448,
-      "modifiedAt": "2026-05-27T16:01:06.804Z",
+      "modifiedAt": "2026-05-27T16:01:06.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -1058,7 +1058,7 @@
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-24.md",
       "bytes": 12452,
-      "modifiedAt": "2026-05-27T16:01:06.802Z",
+      "modifiedAt": "2026-05-27T16:03:19.352Z",
       "sections": 1,
       "sourceType": "inbox"
     },
