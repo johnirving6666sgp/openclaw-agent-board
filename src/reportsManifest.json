@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T14:05:04.003Z",
+  "generatedAt": "2026-05-27T14:07:15.998Z",
   "sourceMode": "hybrid",
   "sourceRoot": "/Users/aijamie4bc/Documents/AIJamie/agent-inbox",
   "reportsDir": "/Users/aijamie4bc/Documents/AIJamie/agents/reports",
@@ -106,28 +106,28 @@
     {
       "fileName": "a-stock-master/2026-05-27-325ef6cecf.md",
       "bytes": 4789,
-      "modifiedAt": "2026-05-27T02:02:11.437Z",
+      "modifiedAt": "2026-05-27T02:02:11.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "a-stock-master/2026-05-27-4649d56977.md",
       "bytes": 5853,
-      "modifiedAt": "2026-05-27T02:31:56.933Z",
+      "modifiedAt": "2026-05-27T02:31:56.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "a-stock-master/2026-05-27-cf0fe132fa.md",
       "bytes": 3853,
-      "modifiedAt": "2026-05-27T00:01:32.977Z",
+      "modifiedAt": "2026-05-27T00:01:32.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "a-stock-master/2026-05-27-ff2ebaf932.md",
       "bytes": 5753,
-      "modifiedAt": "2026-05-27T09:01:16.999Z",
+      "modifiedAt": "2026-05-27T09:01:16.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -246,7 +246,7 @@
     {
       "fileName": "enterprise-ai-master/2026-05-26-ab33d51cf3.md",
       "bytes": 273,
-      "modifiedAt": "2026-05-27T06:56:00.774Z",
+      "modifiedAt": "2026-05-27T06:56:00.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -267,7 +267,7 @@
     {
       "fileName": "hk-stock-master/2026-05-26-89f29b10bb.md",
       "bytes": 3295,
-      "modifiedAt": "2026-05-27T01:01:11.012Z",
+      "modifiedAt": "2026-05-27T01:01:11.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -624,14 +624,14 @@
     {
       "fileName": "jp-stock-master/2026-05-26-4bec912e17.md",
       "bytes": 5347,
-      "modifiedAt": "2026-05-27T00:03:52.691Z",
+      "modifiedAt": "2026-05-27T00:03:52.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
     {
       "fileName": "jp-stock-master/2026-05-27-80ef084574.md",
       "bytes": 5347,
-      "modifiedAt": "2026-05-27T00:04:17.340Z",
+      "modifiedAt": "2026-05-27T00:04:17.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -694,7 +694,7 @@
     {
       "fileName": "us-stock-master/2026-05-27-89e0cef847.md",
       "bytes": 7189,
-      "modifiedAt": "2026-05-27T13:03:37.830Z",
+      "modifiedAt": "2026-05-27T13:03:37.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -1051,7 +1051,7 @@
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-24.md",
       "bytes": 12452,
-      "modifiedAt": "2026-05-27T14:05:03.004Z",
+      "modifiedAt": "2026-05-27T14:07:14.999Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -1065,7 +1065,7 @@
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-26.md",
       "bytes": 11376,
-      "modifiedAt": "2026-05-26T21:03:35.957Z",
+      "modifiedAt": "2026-05-26T21:03:35.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
