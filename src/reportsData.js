@@ -25,6 +25,19 @@ export const agentReports = [
     "origin": "inbox"
   },
   {
+    "id": "2026-05-28-港股大师-c0681cc307",
+    "agent": "港股大师",
+    "date": "2026-05-28",
+    "title": "港股大师",
+    "summary": "• 目录：/Users/aijamie4bc/Documents/AIJamie/agenttasks/hkstockmaster/",
+    "bullets": [
+      "• 目录：/Users/aijamie4bc/Documents/AIJamie/agenttasks/hkstockmaster/"
+    ],
+    "raw": "## 港股大师\n_生成时间：18:02_\n\n🐉 港股观察清单日更 · 2026-05-28\n\nAIJamie 任务队列检查\n• 目录：/Users/aijamie4bc/Documents/AIJamie/agent-tasks/hk-stock-master/\n• 结果：未发现 status 为 open 的 Markdown 任务文件\n• 已处理 AIJamie 任务：任务队列为空（无 open 文件）\n\n📈 评分变动\n• 腾盛博药-B（2137）｜评分维持60｜近48小时公开搜索未见新的 ENRICH/ENHANCE IIb 主读数、监管节点、融资安排或管理层扰动｜[来源: 公开搜索结果/Brii Bio 投资者关系公开入口, 可信度: A-2]\n• 华领医药-B（2552）｜评分维持77｜近48小时公开搜索未见新增经核验的销售放量、第二代 GKA 读数、固定复方、海外 BD 或医保落地硬数据｜[来源: 公开搜索结果/Hua Medicine 官网公开入口, 可信度: A-2]\n• 华兴资本控股（1911）｜评分维持65｜近48小时公开搜索未见新的治理修复、监管进展、资产处置、资本运作或业务恢复级别增量信息｜[来源: 公开搜索结果/China Renaissance 官网公开入口, 可信度: A-2]\n\n📊 财务更新\n• 本轮48小时窗口内未见新的经核验财务披露，因此不更新现金、受限资金或 runway 数字，沿用上一轮已记录口径。\n\n❗ 未验证信息\n• 当前运行环境未提供可调用的 source-verifier skill；因此本轮仅依据公司官网、港交所公开入口及搜索结果做保守筛查。\n• 若后续出现具体临床数据、财务数字、BD金额或关键合作声明，需先完成信源核验，再作为评分调整依据。\n\n备注\n• 已更新文件：watchlists/hualing-model-watchlist.md\n• 本轮三家公司均为“无新信息，维持评分”。",
+    "source": "hk-stock-master/2026-05-28-4f608d7e57.md",
+    "origin": "inbox"
+  },
+  {
     "id": "2026-05-27-A股大师-381614cf88",
     "agent": "A股大师",
     "date": "2026-05-27",
