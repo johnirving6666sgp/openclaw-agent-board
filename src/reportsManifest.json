@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-28T14:28:11.871Z",
+  "generatedAt": "2026-05-28T14:30:23.425Z",
   "sourceMode": "hybrid",
   "sourceRoot": "/Users/aijamie4bc/Documents/AIJamie/agent-inbox",
   "reportsDir": "/Users/aijamie4bc/Documents/AIJamie/agents/reports",
@@ -141,7 +141,7 @@
     {
       "fileName": "a-stock-master/2026-05-28-c3f2aa3216.md",
       "bytes": 8521,
-      "modifiedAt": "2026-05-28T09:03:46.148Z",
+      "modifiedAt": "2026-05-28T09:03:46.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -281,7 +281,7 @@
     {
       "fileName": "enterprise-ai-master/2026-05-27-d3900505ff.md",
       "bytes": 1380,
-      "modifiedAt": "2026-05-28T06:56:11.006Z",
+      "modifiedAt": "2026-05-28T06:56:11.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -764,7 +764,7 @@
     {
       "fileName": "us-stock-master/2026-05-28-8bf49ea628.md",
       "bytes": 7162,
-      "modifiedAt": "2026-05-28T13:02:10.371Z",
+      "modifiedAt": "2026-05-28T13:02:10.000Z",
       "sections": 1,
       "sourceType": "inbox"
     },
@@ -1121,7 +1121,7 @@
     {
       "fileName": "us-stock-master/workspace-usstock-2026-05-24.md",
       "bytes": 12452,
-      "modifiedAt": "2026-05-28T14:28:10.872Z",
+      "modifiedAt": "2026-05-28T14:30:22.426Z",
       "sections": 1,
       "sourceType": "inbox"
     },
