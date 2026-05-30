@@ -179,12 +179,77 @@ function ReportCard({ report, expanded, onToggle }) {
           </section>
           <section>
             <h4>原文</h4>
-            <pre>{report.raw}</pre>
+            <MarkdownText content={report.raw} />
           </section>
         </div>
       )}
     </article>
   );
+}
+
+function MarkdownText({ content }) {
+  const blocks = content.split('\n').map((line, index) => {
+    const trimmed = line.trim();
+
+    if (!trimmed) {
+      return <div className="raw-gap" key={`gap-${index}`} />;
+    }
+
+    const heading = trimmed.match(/^(#{1,4})\s+(.+)$/);
+    if (heading) {
+      return (
+        <p className={`raw-heading level-${heading[1].length}`} key={`heading-${index}`}>
+          {cleanInlineText(heading[2])}
+        </p>
+      );
+    }
+
+    if (/^[-*_]{3,}$/.test(trimmed)) {
+      return <hr className="raw-divider" key={`divider-${index}`} />;
+    }
+
+    const bullet = trimmed.match(/^[-*•]\s+(.+)$/);
+    if (bullet) {
+      return (
+        <p className="raw-bullet" key={`bullet-${index}`}>
+          {cleanInlineText(bullet[1])}
+        </p>
+      );
+    }
+
+    const numbered = trimmed.match(/^(\d+[.、)]\s*)(.+)$/);
+    if (numbered) {
+      return (
+        <p className="raw-numbered" key={`numbered-${index}`}>
+          <span>{numbered[1].trim()}</span>
+          {cleanInlineText(numbered[2])}
+        </p>
+      );
+    }
+
+    if (/^_.*_$/.test(trimmed)) {
+      return (
+        <p className="raw-muted" key={`muted-${index}`}>
+          {cleanInlineText(trimmed)}
+        </p>
+      );
+    }
+
+    return (
+      <p className="raw-paragraph" key={`paragraph-${index}`}>
+        {cleanInlineText(trimmed)}
+      </p>
+    );
+  });
+
+  return <div className="raw-text">{blocks}</div>;
+}
+
+function cleanInlineText(value) {
+  return value
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/^_+|_+$/g, '');
 }
 
 createRoot(document.getElementById('root')).render(<App />);
